@@ -16,21 +16,21 @@ enableRobotsTXT = true
     identifier = "about"
     title = "About"
     url = "/about/"
- [[menu.main]]
-    identifier = "blog"
-    name = "Blog"
-    title = "blog section"
-    url = "/blog/"
- [[menu.main]]
-    identifier = "research"
-    name = "Research"
-    title = "research section"
-    url = "/research/"
- [[menu.main]]
-    identifier = "group"
-    name = "Group"
-    title = "group section"
-    url = "/group/"
+[[menu.main]]
+  identifier = "blog"
+  name = "Blog"
+  title = "blog section"
+  url = "/blog/"
+[[menu.main]]
+  identifier = "research"
+  name = "Research"
+  title = "research section"
+  url = "/research/"
+[[menu.main]]
+  identifier = "group"
+  name = "Group"
+  title = "group section"
+  url = "/group/"
 
 [sitemap]
   changefreq = "monthly"
@@ -39,7 +39,7 @@ enableRobotsTXT = true
 
 [params]
   favicon = ""
-  description = "A website for Tim Read's lab at Emory University"
+  description = "EMory bactERial GEnomics aNd meTagenomics"
   facebook = ""
   twitter = "https://twitter.com/tdread_emory"
   instagram = ""
