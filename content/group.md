@@ -20,4 +20,4 @@ draft: true
 #### Michelle Hargita BS, Senior Research Associate
 
 ### Former Members
-Tauqeer Alam, Daniel Cox, Matthew Jamie Davis, Ezewudo, Michael Frisch, Chad Haase, Sandeep Joseph, Karla Passalacqua, Jessica Peterson, Milton Tan
+Tauqeer Alam, Daniel Cox, Matthew Jamie Davis, Matthew Ezewudo, Michael Frisch, Chad Haase, Sandeep Joseph, Karla Passalacqua, Jessica Peterson, Milton Tan
