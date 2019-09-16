@@ -1,4 +1,4 @@
-title = "Read Lab Website"
+title = "EMERGENT"
 baseURL = "https://ogston.genetics.emory.edu"
 languageCode = "en-us"
 theme = "gohugo-theme-ananke"
@@ -41,7 +41,7 @@ enableRobotsTXT = true
   favicon = ""
   description = "A website for Tim Read's lab at Emory University"
   facebook = ""
-  twitter = "https://twitter.com/tread"
+  twitter = "https://twitter.com/tdread_emory"
   instagram = ""
   youtube = ""
   github = ""
@@ -50,6 +50,6 @@ enableRobotsTXT = true
   mastodon = ""
   # choose a background color from any on this page: http://tachyons.io/docs/themes/skins/ and preface it with "bg-"
   background_color_class = "bg-black"
-  featured_image = "/images/gohugo-default-sample-hero-image.jpg"
+  featured_image = "/images/USA500_circle.png"
   recent_posts_number = 2
   custom_css = ["css/custom.css"]
