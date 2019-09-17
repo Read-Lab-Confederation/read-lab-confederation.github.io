@@ -19,5 +19,9 @@ draft: false
 
 #### Michelle Hargita BS, Senior Research Associate
 
+![]( /images/2019-09-17-group.JPG)
+
+*September 2019 L-R: Poulami, Jon, Tim, Michelle H (back), Michelle S., Robert, Ashley* 
 ### Former Members
 Tauqeer Alam, Daniel Cox, Jamie Davis, Matthew Ezewudo, Michael Frisch, Chad Haase, Sandeep Joseph, Karla Passalacqua, Jessica Peterson, Milton Tan
+
