@@ -15,5 +15,5 @@ Follow us on Twitter: <a href="https://twitter.com/tdread_emory" target="_blank"
 {{< group "current_members" >}}
 
 ### Former Members
-Tauqeer Alam, Daniel Cox, Jamie Davis, Matthew Ezewudo, Michael Frisch, Chad Haase, Sandeep Joseph, Karla Passalacqua, Jessica Peterson, Milton Tan
+Tauqeer Alam, Daniel Cox, Jamie Davis, Matthew Ezewudo, Michael Frisch, Chad Haase, [Sandeep Joseph](https://twitter.com/jose_sandeep), Karla Passalacqua, Jessica Peterson, Kranthi Vavikolanu, [Milton Tan](https://twitter.com/mtanichthys)
 
