@@ -11,26 +11,29 @@ Paginate = 3 # this is set low for demonstrating with dummy content. Set to a hi
 googleAnalytics = ""
 enableRobotsTXT = true
 
+[taxonomies]
+  group = "group"
+
 [[menu.main]]
     name = "About"
     identifier = "about"
     title = "About"
     url = "/about/"
 [[menu.main]]
-  identifier = "blog"
-  name = "Blog"
-  title = "blog section"
-  url = "/blog/"
+    identifier = "blog"
+    name = "Blog"
+    title = "blog section"
+    url = "/blog/"
 [[menu.main]]
-  identifier = "research"
-  name = "Research"
-  title = "research section"
-  url = "/research/"
+    identifier = "research"
+    name = "Research"
+    title = "research section"
+    url = "/research/"
 [[menu.main]]
-  identifier = "group"
-  name = "Group"
-  title = "group section"
-  url = "/group/"
+    identifier = "group"
+    name = "Group"
+    title = "group section"
+    url = "/group/"
 
 [sitemap]
   changefreq = "monthly"
@@ -53,3 +56,4 @@ enableRobotsTXT = true
   featured_image = "/images/USA500_circle.png"
   recent_posts_number = 2
   custom_css = ["css/custom.css"]
+

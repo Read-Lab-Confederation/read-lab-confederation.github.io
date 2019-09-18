@@ -1,5 +1,5 @@
 {{$article_author := .Params.author }}
-{{ range $.Site.Data.authors}}
+{{ range $.Site.Data.group}}
     {{ if and (eq .display_name $article_author) }}
     <div class="author-info">
         <p class="author-name">{{.display_name}}</p>

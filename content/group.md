@@ -2,26 +2,18 @@
 title: "Group"
 date: 2019-09-09T11:56:13-04:00
 draft: false
+type: "group"
 ---
+### EMERGENT Group
+We are based in the School of Medicine, Division of Infectious Diseases at  Emory University in Atlanta, Georgia.
+Follow us on Twitter: <a href="https://twitter.com/tdread_emory" target="_blank">@tdread_emory</a>
 
-#### Timothy D. Read Ph.D, Professor of Medicine {{< orcid 0000-0001-8966-9680 >}}
-[Twitter](https://twitter.com/tdread_emory)
-[Scholar](https://scholar.google.com/citations?user=XF5C7cgAAAAJ&hl=en)
-[Bibliography](https://www.ncbi.nlm.nih.gov/myncbi/timothy.read.2/bibliography/public/)
+{{< group "group_picture" "/images/2019-09-17-group.JPG" "September 2019 L-R: Poulami, Jon, Tim, Michelle H (back), Michelle S., Robert, Ashley" >}}
 
-#### Robert A. Petit III MS Ph.D, Senior Bioinformaticist {{< orcid 0000-0002-1350-9426 >}}
+### Current Members
 
-#### Michelle Su BS, MMG Graduate Student {{< orcid 0000-0002-3212-2120 >}}
+{{< group "current_members" >}}
 
-#### Abraham (Jon) Moller BS, MMG Graduate Student
-
-#### Ashley Alexander BS, PBEE Graduate Student
-
-#### Michelle Hargita BS, Senior Research Associate
-
-![]( /images/2019-09-17-group.JPG)
-
-*September 2019 L-R: Poulami, Jon, Tim, Michelle H (back), Michelle S., Robert, Ashley* 
 ### Former Members
 Tauqeer Alam, Daniel Cox, Jamie Davis, Matthew Ezewudo, Michael Frisch, Chad Haase, Sandeep Joseph, Karla Passalacqua, Jessica Peterson, Milton Tan
 
