@@ -23,5 +23,5 @@ draft: false
 
 *September 2019 L-R: Poulami, Jon, Tim, Michelle H (back), Michelle S., Robert, Ashley* 
 ### Former Members
-Tauqeer Alam, Daniel Cox, Jamie Davis, Matthew Ezewudo, Michael Frisch, Chad Haase, Sandeep Joseph, Karla Passalacqua, Jessica Peterson, Milton Tan
+Tauqeer Alam, Daniel Cox, Jamie Davis, Matthew Ezewudo, Michael Frisch, Chad Haase, [Sandeep Joseph](https://twitter.com/jose_sandeep), Karla Passalacqua, Jessica Peterson, Kranthi Vavikolanu, [Milton Tan](https://twitter.com/mtanichthys)
 
