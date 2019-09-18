@@ -11,6 +11,7 @@ Paginate = 3 # this is set low for demonstrating with dummy content. Set to a hi
 googleAnalytics = ""
 enableRobotsTXT = true
 
+
 [taxonomies]
   group = "group"
 
@@ -56,4 +57,4 @@ enableRobotsTXT = true
   featured_image = "/images/USA500_circle.png"
   recent_posts_number = 2
   custom_css = ["css/custom.css"]
-
+  mainSections = ["blog"]

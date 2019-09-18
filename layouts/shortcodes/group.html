@@ -8,11 +8,13 @@
     <div class="flex flex-wrap">
     {{ range sort $.Site.Data.group ".weight" }}
         {{ if .display_name }}
+                {{ $slug := printf "%s-%s" .first_name .last_name | lower}}
+                {{ $image := printf "static/images/group/%s.jpg" $slug}}
                 <div class="w-30 pa3 mr2">
-                    <a href="/group/{{ .first_name | lower }}-{{ .last_name | lower }}">
+                    <a href="/group/{{$slug}}/">
                     <div class="group-image-container">
-                        {{ if .profile_picture }}
-                            <img src="{{ .profile_picture }}" alt="{{ .display_name }}" class="profile-image">
+                        {{ if (fileExists $image) -}}
+                            <img src="/images/group/{{$slug}}.jpg" alt="{{ .display_name }}" class="profile-image">
                         {{ else }}
                             <img src="/images/group/blank.png" alt="{{ .display_name }}" class="profile-image">
                         {{ end }}

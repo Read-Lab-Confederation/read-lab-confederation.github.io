@@ -33,8 +33,11 @@
                 </div>
             </div>
             <div class="blah w-30-ns pt4">
-                {{ if .profile_picture }}
-                    <img src="{{ .profile_picture }}" alt="Profile Picture">
+                {{ $image := printf "static/images/group/%s.jpg" $slug}}
+                {{ if (fileExists $image) -}}
+                    <img src="/images/group/{{$slug}}.jpg" alt="{{ .display_name }}" class="profile-image">
+                {{ else }}
+                    <img src="/images/group/blank.png" alt="{{ .display_name }}" class="profile-image">
                 {{ end }}
             </div>
         </div>
