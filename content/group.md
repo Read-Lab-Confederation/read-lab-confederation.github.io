@@ -5,9 +5,9 @@ draft: false
 type: "group"
 ---
 ### EMERGENT Group
-We are based in the School of Medicine, Division of Infectious Diseases at  Emory University in Atlanta, Georgia.
+The Read lab is based in the School of Medicine, Division of Infectious Diseases at  Emory University in Atlanta, Georgia.
 
-{{< group "group_picture" "/images/2019-09-17-group.JPG" "September 2019 L-R: Poulami, Jon, Tim, Michelle H (back), Michelle S., Robert, Ashley" >}}
+{{< group "group_picture" "/images/2019-09-17-group.JPG" "Read lab September 2019 L-R: Poulami (Fall roration student), Jon, Tim, Michelle H (back), Michelle S., Robert, Ashley" >}}
 
 ### Current Members
 
