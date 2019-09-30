@@ -1,7 +1,7 @@
 ---
 title: "Research"
 date: 2019-09-09T11:56:20-04:00
-draft: true
+draft: false
 ---
 
 ### *Staphylococcus aureus* (MRSA)

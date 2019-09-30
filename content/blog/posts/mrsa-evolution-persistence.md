@@ -4,7 +4,7 @@ description: ""
 author: "Tim Read"
 date: 2019-09-10T06:45:13-04:00
 featured_image: "/images/2019-USA300-background.png"
-draft: true
+draft: false
 ---
 [Read TD, Petit III RA, Yin Z, Montgomery T, McNulty MC, David MZ. USA300 Staphylococcus aureus persists on multiple body sites following an infection. BMC Microbiol [Internet]. 2018 Dec 5;18(1):206. Available from: https://doi.org/10.1186/s12866-018-1336-z](https://bmcmicrobiol.biomedcentral.com/articles/10.1186/s12866-018-1336-z)
 
