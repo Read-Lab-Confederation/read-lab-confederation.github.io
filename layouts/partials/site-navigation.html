@@ -8,7 +8,7 @@
       {{ if .Site.Menus.main }}
         <ul class="pl0 mr3">
           {{ range .Site.Menus.main }}
-          <li class="list f6 f4-ns fw4 dib pr1 pr3-ns">
+          <li class="list f7 f4-ns fw4 dib pr1 pr3-ns">
             <a class="hover-white no-underline white-90" href="{{ .URL }}" title="{{ .Name }} page">
               {{ .Name }}
             </a>
@@ -17,7 +17,6 @@
           <li class="list f5 f4-ns fw4 dib pr1 pr3-ns">{{ partialCached "social-follow.html" . }}</li>
         </ul>
       {{ end }}
-
     </div>
   </div>
 </nav>
