@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on EMERGENT</title>
+    <link>https://read-lab-confederation.github.io/blog/</link>
+    <description>Recent content in Posts on EMERGENT</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 09 Sep 2019 12:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://read-lab-confederation.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Genomics of MRSA evolution and persistence on the human body</title>
+      <link>https://read-lab-confederation.github.io/blog/posts/mrsa-evolution-persistence/</link>
+      <pubDate>Tue, 10 Sep 2019 06:45:13 -0400</pubDate>
+      
+      <guid>https://read-lab-confederation.github.io/blog/posts/mrsa-evolution-persistence/</guid>
+      <description>Read TD, Petit III RA, Yin Z, Montgomery T, McNulty MC, David MZ. USA300 Staphylococcus aureus persists on multiple body sites following an infection. BMC Microbiol [Internet]. 2018 Dec 5;18(1):206. Available from: https://doi.org/10.1186/s12866-018-1336-z
+Microbiologists know surprisingly little about the dynamics of bacterial life on the human body: how strains are acquired, how they move between body sites and how long it takes for them to die off or be replaced.</description>
+    </item>
+    
+  </channel>
+</rss>
