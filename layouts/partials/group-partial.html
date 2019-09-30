@@ -16,7 +16,7 @@
                         {{ if .social.google_scholar }}
                             <a href="{{.social.google_scholar}}" target="_blank">Google Scholar</a>
                         {{ end }}
-                        {{ if .social.google_scholar }}
+                        {{ if .social.ncbi_bibliography }}
                             <a href="{{.social.ncbi_bibliography}}" target="_blank">Bibliography</a>
                         {{ end }}
                     </p>
@@ -30,12 +30,20 @@
                             GitHub: <a href="https://github.com/{{.social.github}}" target="_blank">@{{.social.github}}</a>
                         </p>
                     {{ end }}
+                    {{ if .social.orcid }}
+                        <p class="social orcid">
+                            ORCID: <a href="https://orcid.org/{{.social.orcid}}" target="_blank">{{.social.orcid}}</a>
+                        </p>
+                    {{ end }}
                 </div>
             </div>
             <div class="blah w-30-ns pt4">
-                {{ $image := printf "static/images/group/%s.jpg" $slug}}
-                {{ if (fileExists $image) -}}
+                {{ $jpg := printf "static/images/group/%s.jpg" $slug}}
+                {{ $png := printf "static/images/group/%s.png" $slug}}
+                {{ if (fileExists $jpg) -}}
                     <img src="/images/group/{{$slug}}.jpg" alt="{{ .display_name }}" class="profile-image">
+                {{ else if (fileExists $png)}}
+                    <img src="/images/group/{{$slug}}.png" alt="{{ .display_name }}" class="profile-image">
                 {{ else }}
                     <img src="/images/group/blank.png" alt="{{ .display_name }}" class="profile-image">
                 {{ end }}

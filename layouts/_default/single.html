@@ -18,11 +18,12 @@
       <h1 class="f1 athelas mb1">
         {{- .Title -}}
       </h1>
-      {{- partial "author-partial.html" . -}}
-      {{/* Hugo uses Go's date formatting is set by example. Here are two formats */}}
       <time class="f6 dib tracked" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
         {{- .Date.Format "January 2, 2006" -}}
       </time>
+      {{ partial "author-partial.html" . }}
+      {{ partial "share-buttons-for-posts.html" . }}
+      {{/* Hugo uses Go's date formatting is set by example. Here are two formats */}}
       {{/*
           Show "reading time" and "word count" but only if one of the following are true:
           1) A global config `params` value is set `show_reading_time = true`
