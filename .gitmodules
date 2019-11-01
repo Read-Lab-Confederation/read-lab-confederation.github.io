@@ -1,4 +1,0 @@
-[submodule "public"]
-	path = public
-	url = https://github.com/Read-Lab-Confederation/read-lab-confederation.github.io.git
-	branch = master
