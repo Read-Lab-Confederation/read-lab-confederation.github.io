@@ -3,6 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://read-lab-confederation.github.io/blog/posts/conda-intro/</loc>
+    <lastmod>2019-10-23T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://read-lab-confederation.github.io/blog/posts/mrsa-evolution-persistence/</loc>
     <lastmod>2019-09-10T06:45:13-04:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -82,7 +89,7 @@
   
   <url>
     <loc>https://read-lab-confederation.github.io/</loc>
-    <lastmod>2019-09-10T06:45:13-04:00</lastmod>
+    <lastmod>2019-10-23T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
