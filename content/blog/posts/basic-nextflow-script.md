@@ -4,7 +4,7 @@ description: ""
 author: ["Tim Read", "Robert Petit"]
 date: 2019-12-09
 featured_image: "/images/nextflow.png"
-draft: true
+draft: false
 ---
 
 ## What is Nextflow and why do I need it?
