@@ -1,7 +1,7 @@
 ---
 title: "Getting to grips with Nextflow"
 description: ""
-author: "Tim Read and Robert Petit"
+author: ["Tim Read", "Robert Petit"]
 date: 2019-12-09
 featured_image: "/images/nextflow.png"
 draft: true
@@ -10,7 +10,7 @@ draft: true
 ## What is Nextflow and why do I need it?
 A recent [blog post](http://www.opiniomics.org/the-three-technologies-bioinformaticians-need-to-be-using-right-now/) identified three components of modern bioinformatics that elevate a user from an early stage code hacker to an efficient power user.  These are containers, cloud computing and workflow software. The other two components will be discussed in other posts but the focus here is on workflows, which allows you to string together programs in reproducible, optimized pipelines that ultimately save time (and money if you want to scale up analysis to the cloud one day).
 
-[Nextflow](https://www.nextflow.io/) is one of the principal free and well-supported workflow software tools written specifically for bioinformatics.  We use it because we like some of the syntax and scalability features but other alternatives, such as snakemake, are also very good.  Nextflow was the basis of the [Staphopia](https://github.com/staphopia/staphopia-ap) and new [Bactopia](https://github.com/bactopia/bactopia) bacterial genome prossing pipelines developed by Robert.  We feel that current Nextflow documentation is skewed toward sophisticated programmers wanting to perform large analysis, so here is gentle walkthrough. This post assumes familiarity with the UNIX command line, experience with ```conda``` and nextgen sequence data.
+[Nextflow](https://www.nextflow.io/) is one of the principal free and well-supported workflow software tools written specifically for bioinformatics.  We use it because we like some of the syntax and scalability features but other alternatives, such as snakemake, are also very good.  Nextflow was the basis of the [Staphopia](https://github.com/staphopia/staphopia-ap) and new [Bactopia](https://github.com/bactopia/bactopia) bacterial genome processing pipelines developed by Robert.  We feel that current Nextflow documentation is skewed toward sophisticated programmers wanting to perform large analysis, so here is gentle walkthrough. This post assumes familiarity with the UNIX command line, experience with ```conda``` and next-gen sequence data.
 
 ## Installation
 *Spoiler alert*: It’s really easy!
@@ -29,68 +29,69 @@ Alternatively, you can install without using Conda. You will need a Linux or OS 
 A simple example
 There are several tutorials that go over the basics of Nextflow and I don't want to repeat them here.  Instead, I’ll introduce a script I created called *[basic_breseq.nf](https://gist.github.com/rpetit3/15a75bed014cd0be9146fb352166337b)*, partly to teach myself (Tim) and try to give a sense of the overall structure without going into details of all the syntax
 
-The idea is to automate [breseq](https://barricklab.org/twiki/pub/Lab/ToolsBacterialGenomeResequencing/documentation/index.html)<sup>1</sup>, a useful program for finding SNPs, indels and other genetic changes between a reference bacterial genome and a mutant that has been sequenced using paired-end Illumina technology.  Normally you run breseq with one reference and FASTQ files from one mutant.  If you have several mutants to run against the same reference you can use the associated `gdtools` program to combine the results into a matrix of variants found at the same position.
+The idea is to automate *[breseq](https://barricklab.org/twiki/pub/Lab/ToolsBacterialGenomeResequencing/documentation/index.html)*, a useful program for finding SNPs, indels and other genetic changes between a reference bacterial genome and a mutant that has been sequenced using paired-end Illumina technology.  Normally you run breseq with one reference and FASTQ files from one mutant.  If you have several mutants to run against the same reference you can use the associated `gdtools` program to combine the results into a matrix of variants found at the same position.
 
 ## The full script in all its glory
 ```
 #!/usr/bin/env nextflow
 
-params.gbfile = "./NRS384.gbk"
+// Input parameters
+params.genbank = "./NRS384.gbk"
 params.fastq = "fastq_files"
+params.pattern = "N*P{1,2}_trim.fq.gz"
 params.outdir = "breseq_analysis_results"
-fastq_file_path = "$params.fastq/N*P{1,2}_trim.fq.gz"
-outdir2 = params.outdir
 
-gbChannel = Channel.fromPath( params.gbfile )
-gbChannel2 = Channel.fromPath( params.gbfile )
-
+// Reference and paired read channels
+fastq_file_path = "$params.fastq/${params.pattern}"
 Channel
     .fromFilePairs(fastq_file_path)
     .ifEmpty { error "Cannot find any reads matching: ${fastq_file_path}" }  
     .set { read_pairs }
 
+// Workflow steps
 process run_breseq {
-    conda 'breseq'
+	conda 'breseq'
+	
+	publishDir "${params.outdir}/runs", mode: 'copy'
 
-    publishDir "${params.outdir}/runs", mode: 'copy'
+	// ‘each’ is used to use the reference genbank file multiple times,
+	// otherwise only the first read set would have been processed
+	input:
+	set pair_id, file(reads) from read_pairs
+	each file(genbank_file) from Channel.fromPath(params.genbank)
 
-    // each is used because the gbChannel is repeatedly called as the
-    // reference for each different fastq pair
-
-    input:
-    set pair_id, file(reads) from read_pairs
-    each file(gbfile) from gbChannel
-
-    output:
-    file("${pair_id}/*")
-    file("${pair_id}/output/output.gd") into gdoutputs
-
-    script:
-    """
-    breseq -r $gbfile -n $pair_id -o $pair_id $reads
-    """
+	output:
+	file("${pair_id}/*")
+	file("${pair_id}/output/output.gd") into gd_outputs
+	
+	script:
+	"""
+	breseq -r $genbank_file -n $pair_id -o $pair_id $reads -j 48
+	"""
 }
 
 process collect_gd {
-    conda 'breseq'
+	conda 'breseq'
+	
+	publishDir "${params.outdir}/variantmatrix", mode: 'copy'
+	
+	// '.collect()' outputs all of outputs in the GD_OUTPUTS channel at once, 
+	// instead of one at a time
+	// https://www.nextflow.io/docs/latest/operator.html#collect
+	input:
+	file '*.gd' from gd_outputs.collect()
+	file(genbank_file) from Channel.fromPath(params.genbank)
 
-    publishDir "${outdir2}/variantmatrix", mode: 'copy'
-
-    input:
-    file '*.gd' from gdoutputs.collect()
-    file(gbfile2) from gbChannel2
-
-    output:
-    file("output.html")
-    file("output.tsv")
-
-    script:
-    """
-    gdtools ANNOTATE -r $gbfile2 *.gd
-    gdtools ANNOTATE -r $gbfile2 -f TSV *.gd
-    """
+	output:
+	file("output.html")
+	file("output.tsv")
+	
+	script:
+	"""
+	gdtools ANNOTATE -r $gbfile2 *.gd
+	gdtools ANNOTATE -r $gbfile2 -f TSV *.gd
+	"""
 }
-
 ```
 
 ### The first part of the script
@@ -179,11 +180,11 @@ process collect_gd {
 ```
 The third part contains two processes, which are the action part of Nextflow.  These are defined as the code between the curly braces ({ }). 
 
-The first process ```run_breseq``` starts with a call to conda to create an environment containing the breseq program.  This means that you don’t have to have breseq installed to run this script! (but you do have to have [conda installed]( https://read-lab-confederation.github.io/blog/posts/conda-intro/)). The first time this script is run, there will be a delay while conda creates the breseq environment but on subsequent runs Nextflow will detect the breseq environment and use the program immediately. Each process sets the input channels and creates channels for output data.  The code between pairs of the three quotes ```”””``` is the script that runs the actual commands based on input and output channels.  
+The first process ```run_breseq``` starts with a call to conda to create an environment containing the breseq program.  This means that you don’t have to have breseq installed to run this script! (but you do have to have [conda installed]( https://read-lab-confederation.github.io/blog/posts/conda-intro/)). The first time this script is run, there will be a delay while conda creates the breseq environment but on subsequent runs Nextflow will detect the breseq environment and use the program immediately. Each process sets the input channels and creates channels for output data.  The code between pairs of the three quotes (`”””`) is the script that runs the actual commands based on input and output channels.  
 
 So the `run_breseq` process will run breseq on all the pairs of fastq files (naming the output files by the root part of the filename) using the supplied reference (input genbank file). The results from this process is saved to the “runs” directory. 
 
-The second process, `collect_gd`, then collects all the *.gd files and processes them using gdtools ANNOTATE. From this a matrix in tabular format is output to the `variantmatrix` directory.
+The second process, `collect_gd`, then collects all files with the *.gd* extension and processes them using gdtools ANNOTATE. From this a matrix in tabular format is output to the `variantmatrix` directory.
 
 Lines starting with ```//``` are comments and not executed as code.
 
@@ -242,6 +243,4 @@ There are easier alternatives to running Nextflow.  You can run each command one
 - Extendability - the same script used to process a small number of samples can easily be scaled  because Nextflow is designed to be compatible with AWS, and other multi-core processing environments.  Porting is as easy as changing a configuration file.  You may not feel that you are ever going to need to scale up this way but things happen and if your Nextflow script is designed to process 2 genomes it can process 10,000 as well.
 
 - Modularity - the Nextflow processes are quite isolated and it is fairly easy to cut and paste them into another pipeline and just edit the inputs and outputs. Similarly, if you can easily cut and paste processes from scripts you find on the web, saving you some time and effort.  
-
-
 
