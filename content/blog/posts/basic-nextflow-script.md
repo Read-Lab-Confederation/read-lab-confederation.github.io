@@ -10,7 +10,7 @@ draft: true
 ## What is Nextflow and why do I need it?
 A recent [blog post](http://www.opiniomics.org/the-three-technologies-bioinformaticians-need-to-be-using-right-now/) identified three components of modern bioinformatics that elevate a user from an early stage code hacker to an efficient power user.  These are containers, cloud computing and workflow software. The other two components will be discussed in other posts but the focus here is on workflows, which allows you to string together programs in reproducible, optimized pipelines that ultimately save time (and money if you want to scale up analysis to the cloud one day).
 
-[Nextflow](https://www.nextflow.io/) is one of the principal free and well-supported workflow software tools written specifically for bioinformatics.  We use it because we like some of the syntax and scalability features but other alternatives, such as snakemake, are also very good.  I feel that current Nextflow documentation is skewed toward sophisticated programmers wanting to perform large analysis, so here is gentle walkthrough. This post assumes familiarity with the UNIX command line, experience with ```conda``` and nextgen sequence data.
+[Nextflow](https://www.nextflow.io/) is one of the principal free and well-supported workflow software tools written specifically for bioinformatics.  We use it because we like some of the syntax and scalability features but other alternatives, such as snakemake, are also very good.  Nextflow was the basis of the [Staphopia](https://github.com/staphopia/staphopia-ap) and new [Bactopia](https://github.com/bactopia/bactopia) bacterial genome prossing pipelines developed by Robert.  We feel that current Nextflow documentation is skewed toward sophisticated programmers wanting to perform large analysis, so here is gentle walkthrough. This post assumes familiarity with the UNIX command line, experience with ```conda``` and nextgen sequence data.
 
 ## Installation
 *Spoiler alert*: It’s really easy!
@@ -27,7 +27,7 @@ conda config --add channels conda-forge
 Alternatively, you can install without using Conda. You will need a Linux or OS X system with Java 8.  The Nextflow site (https://www.nextflow.io) gives the details on how to install.  You should download Nextflow to a directory customarily used for programs and make sure to add it to your PATH (e.g. .profile, .bash_profile, etc…).
 
 A simple example
-There are several tutorials that go over the basics of Nextflow and I don't want to repeat them here.  Instead, I’ll introduce a script I created called *[basic_breseq.nf](https://gist.github.com/rpetit3/15a75bed014cd0be9146fb352166337b)*, partly to teach myself and try to give a sense of the overall structure without going into details of all the syntax
+There are several tutorials that go over the basics of Nextflow and I don't want to repeat them here.  Instead, I’ll introduce a script I created called *[basic_breseq.nf](https://gist.github.com/rpetit3/15a75bed014cd0be9146fb352166337b)*, partly to teach myself (Tim) and try to give a sense of the overall structure without going into details of all the syntax
 
 The idea is to automate [breseq](https://barricklab.org/twiki/pub/Lab/ToolsBacterialGenomeResequencing/documentation/index.html)<sup>1</sup>, a useful program for finding SNPs, indels and other genetic changes between a reference bacterial genome and a mutant that has been sequenced using paired-end Illumina technology.  Normally you run breseq with one reference and FASTQ files from one mutant.  If you have several mutants to run against the same reference you can use the associated `gdtools` program to combine the results into a matrix of variants found at the same position.
 
@@ -204,7 +204,7 @@ There are a ton of options for running Nextflow - read the online manual for mor
 The workflow directory can get pretty large with excess directories if the script is run repeated with -resume but can be cleaned up by the ```nextflow clean``` command.
 
 ## Writing and debugging Nextflow scripts
-I have found that writing new scripts is more difficult than R and Python.  This is partly because I am not familiar with the underlying Groovy language that Nextflow is based on.  There are no tools for developing and debugging that I am aware of, so you are forced into writing print statements to understand the values that variables have been assigned (the .println() function is useful).
+I (Tim) have found that writing new scripts is more difficult than R and Python.  This is partly because I am not familiar with the underlying Groovy language that Nextflow is based on.  There are no tools for developing and debugging that I am aware of, so you are forced into writing print statements to understand the values that variables have been assigned (the .println() function is useful).
 
 When developing new scripts I suggest finding a minimal data set consisting of the smallest possible files that produce a known result.  Develop the script one process at a time.
 
@@ -235,17 +235,13 @@ bash .command.sh
 ```
 
 ## Is it worth it?
-There are easier alternatives to running Nextflow.  You can run each command one by one manually, or put them in a simple Bash or Python script.  Nextflow has a lot of powerful features (most of which I haven’t touched on in this blog) that really become useful when you have a large number of processes and files. It creates what can sometimes be huge work directories that can be a burden if disk space is limiting (or you are paying for it on the cloud).  Nextflow can sometimes feel like using a Ferrari to pop down the street to pick up a pint of milk.  The arguments for putting in the upfront effort to script Nextflow workflows are:
+There are easier alternatives to running Nextflow.  You can run each command one by one manually, or put them in a simple Bash or Python script, or use a graphical workflow manager like [Galaxy](https://galaxyproject.org).  Nextflow has a lot of powerful features (most of which we haven’t touched on in this blog) that really become useful when you have a large number of processes and files. It creates what can sometimes be huge work directories that can be a burden if disk space is limiting (or you are paying for it on the cloud).  Nextflow can sometimes feel like using a Ferrari to pop down the street to pick up a pint of milk.  The arguments for putting in the upfront effort to script Nextflow workflows are:
 
 - Reproducibility - the Nexflow script and work directory provide an explicit record of the way analysis was performed to produce a result.  This is useful for publication and for understanding how results were produced long after the work was performed.
 
-- Extendability - the same script used to process a small number of samples can easily be scaled through because Nextflow is designed to be compatible with AWS, and other multi-core processing environments.  Porting is as easy as changing a configuration file.  You may not feel that you are ever going to need to scale up this way but things happen and if your Nextflow script is designed to process 2 genomes it can process 10,000 as well.
+- Extendability - the same script used to process a small number of samples can easily be scaled  because Nextflow is designed to be compatible with AWS, and other multi-core processing environments.  Porting is as easy as changing a configuration file.  You may not feel that you are ever going to need to scale up this way but things happen and if your Nextflow script is designed to process 2 genomes it can process 10,000 as well.
 
-- Modularity - the Nextflow processes are quite isolated and it is quite easy to cut and paste them into another pipeline and just edit the inputs and outputs. Similarly, if you can easily cut and paste processes from scripts you find on the web, saving you some time and effort.  
+- Modularity - the Nextflow processes are quite isolated and it is fairly easy to cut and paste them into another pipeline and just edit the inputs and outputs. Similarly, if you can easily cut and paste processes from scripts you find on the web, saving you some time and effort.  
 
 
-## Useful links
-[Netflow patterns](http://nextflow-io.github.io/patterns/index.html)
-
-1. 	[Deatherage DE, Barrick JE. Identification of mutations in laboratory-evolved microbes from next-generation sequencing data using breseq. Methods Mol Biol [Internet]. 2014;1151:165–188. Available from: http://dx.doi.org/10.1007/978-1-4939-0554-6_12 PMCID: PMC4239701](http://dx.doi.org/10.1007/978-1-4939-0554-6_12)
 
