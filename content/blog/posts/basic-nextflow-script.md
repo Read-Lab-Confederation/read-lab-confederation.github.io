@@ -88,8 +88,8 @@ process collect_gd {
 	
 	script:
 	"""
-	gdtools ANNOTATE -r $gbfile2 *.gd
-	gdtools ANNOTATE -r $gbfile2 -f TSV *.gd
+	gdtools ANNOTATE -r $genbank_file *.gd
+	gdtools ANNOTATE -r $genbank_file -f TSV *.gd
 	"""
 }
 ```
