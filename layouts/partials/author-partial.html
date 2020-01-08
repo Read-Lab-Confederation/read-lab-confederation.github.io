@@ -1,8 +1,24 @@
 {{$article_author := .Params.author }}
-{{ range $.Site.Data.group}}
-    {{ if eq .display_name $article_author }}
-    <div class="author-info">
-        <p class="author-name">{{.display_name}}</p>
-    </div>
-    {{ end }}
-{{ end }}
+{{$total := len .Params.author}}
+<div class="author-info">
+        <p class="author-name">
+        {{ range $i, $author := $article_author }}
+            {{$current := add $i 1 }}
+            {{ range $.Site.Data.group}}
+                {{ if eq .display_name $author }} 
+                    {{ if eq $total 1 }}
+                        {{.display_name}}
+                    {{ else }}
+                        {{ if eq $current  $total }}                   
+                            & {{.display_name}}
+                        {{ else if eq $current 1 }}
+                            {{.display_name}}
+                        {{ else }}
+                            , {{.display_name}}
+                        {{end}}
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+        {{end}}
+    </p>
+</div>
