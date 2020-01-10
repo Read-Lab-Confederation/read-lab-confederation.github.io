@@ -4,7 +4,7 @@ description: ""
 author: ["Tim Read"]
 date: 2020-01-08
 featured_image: "/images/2020-01-08_blogpost.jpg"
-draft: true
+draft: false
 ---
 
 If you recognize the birth of bacterial genomics as the 1995 publication of the complete genome sequence of _Haemophilus influenzae_ Rd<sup><a href="http://www.ncbi.nlm.nih.gov/pubmed/7542800">1</a> </sup>then the field reached the beginning of the 2010s in adolescence and by the end of the decade had matured into adulthood.  Much of the progress was driven by the steadily increasing output and decreasing costs of the workhorse Illumina short read sequencing platform.  This meant more genomes per dollar, and with higher per base coverage, relatively few errors in the assembled portions of the genome. However, it has not all been about just churning out more of the same but for less money, the 2010s saw a huge number of new applications and finding new questions to answer using genomics.  The PacBio and Oxford Nanopore long read sequencing platforms became increasingly influential toward the end of the decade and found their own distinctive niches.

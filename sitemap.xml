@@ -3,6 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://read-lab-confederation.github.io/blog/posts/genomics_papers_2010s/</loc>
+    <lastmod>2020-01-08T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://read-lab-confederation.github.io/blog/posts/basic-nextflow-script/</loc>
     <lastmod>2019-12-09T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -102,7 +109,7 @@
   
   <url>
     <loc>https://read-lab-confederation.github.io/</loc>
-    <lastmod>2019-12-09T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-08T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>

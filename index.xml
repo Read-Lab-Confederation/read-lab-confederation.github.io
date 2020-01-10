@@ -6,10 +6,19 @@
     <description>Recent content on EMERGENT</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 09 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://read-lab-confederation.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Seven significant bacterial genomics papers from the 2010s</title>
+      <link>https://read-lab-confederation.github.io/blog/posts/genomics_papers_2010s/</link>
+      <pubDate>Wed, 08 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://read-lab-confederation.github.io/blog/posts/genomics_papers_2010s/</guid>
+      <description>If you recognize the birth of bacterial genomics as the 1995 publication of the complete genome sequence of Haemophilus influenzae Rd1 then the field reached the beginning of the 2010s in adolescence and by the end of the decade had matured into adulthood. Much of the progress was driven by the steadily increasing output and decreasing costs of the workhorse Illumina short read sequencing platform. This meant more genomes per dollar, and with higher per base coverage, relatively few errors in the assembled portions of the genome.</description>
+    </item>
     
     <item>
       <title>Getting to grips with Nextflow</title>
@@ -77,7 +86,7 @@ Chlamydia Bacteria of the Chlamydia genus cause a wide range of infections in hu
       <guid>https://read-lab-confederation.github.io/group/</guid>
       <description>EMERGENT Group The Read lab is based in the School of Medicine, Division of Infectious Diseases at Emory University in Atlanta, Georgia.
 Read lab September 2019 L-R: Poulami (Fall rotation student), Jon, Tim, Michelle H (back), Michelle S., Robert, Ashley
-Current Members Tim Read (PI/Advisor)      Michelle Hargita (Senior Research Associate)      Robert Petit (Senior Bioinformaticist)      Michelle Su (MMG Graduate Student)      Jon Moller (MMG Graduate Student)      Ashley Alexander (PBEE Graduate Student)      Emily Wissel (SON Graduate Student)       Former Members Tauqeer Alam, Daniel Cox, Jamie Davis, Matthew Ezewudo, Michael Frisch, Chad Haase, Sandeep Joseph, Karla Passalacqua, Jessica Peterson, Kranthi Vavikolanu, Milton Tan</description>
+Current Members Tim Read (PI/Advisor)      Robert Petit (Senior Bioinformaticist)      Michelle Hargita (Senior Research Associate)      Michelle Su (MMG Graduate Student)      Jon Moller (MMG Graduate Student)      Ashley Alexander (PBEE Graduate Student)      Emily Wissel (SON Graduate Student)       Former Members Tauqeer Alam, Daniel Cox, Jamie Davis, Matthew Ezewudo, Michael Frisch, Chad Haase, Sandeep Joseph, Karla Passalacqua, Jessica Peterson, Kranthi Vavikolanu, Milton Tan</description>
     </item>
     
     <item>
