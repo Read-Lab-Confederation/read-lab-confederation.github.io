@@ -6,10 +6,19 @@
     <description>Recent content on EMERGENT</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 08 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 15 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://read-lab-confederation.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bacterial Strain names and Biosample IDs</title>
+      <link>https://read-lab-confederation.github.io/blog/posts/bacterial_strain_names/</link>
+      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://read-lab-confederation.github.io/blog/posts/bacterial_strain_names/</guid>
+      <description>When working on bacterial bioinformatic projects, the public databases maintained by NCBI and other members of the International Nucleotide Sequence Database Collaboration (INSDC) are commonly featured as central resources. Two key concepts to know about working with these databases are BioProject and BioSample. These were created1 at NCBI as genome data began to gush in, at the beginning of the 2010s following the development of “second generation” sequencing technologies. The structure is mirrored between the INSDC databases, although IDs for the same data can be different.</description>
+    </item>
     
     <item>
       <title>Seven significant bacterial genomics papers from the 2010s</title>
