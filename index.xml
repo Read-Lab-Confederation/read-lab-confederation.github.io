@@ -17,7 +17,7 @@
       <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://read-lab-confederation.github.io/blog/posts/bacterial_strain_names/</guid>
-      <description>When working on bacterial bioinformatic projects, the public databases maintained by NCBI and other members of the International Nucleotide Sequence Database Collaboration (INSDC) are commonly featured as central resources. Two key concepts to know about working with these databases are BioProject and BioSample. These were created1 at NCBI as genome data began to gush in, at the beginning of the 2010s following the development of “second generation” sequencing technologies. The structure is mirrored between the INSDC databases, although IDs for the same data can be different.</description>
+      <description>The public databases maintained by NCBI and other members of the International Nucleotide Sequence Database Collaboration (INSDC) are central resources for bacterial bioinformatic analysis. Two key concepts to know about working with these databases are BioProject and BioSample. These were created1 at NCBI as genome data began to gush in, at the beginning of the 2010s following the development of “second generation” sequencing technologies. The structure is mirrored between the INSDC databases, although IDs for the same data can be different.</description>
     </item>
     
     <item>
@@ -95,7 +95,7 @@ Chlamydia Bacteria of the Chlamydia genus cause a wide range of infections in hu
       <guid>https://read-lab-confederation.github.io/group/</guid>
       <description>EMERGENT Group The Read lab is based in the School of Medicine, Division of Infectious Diseases at Emory University in Atlanta, Georgia.
 Read lab September 2019 L-R: Poulami (Fall rotation student), Jon, Tim, Michelle H (back), Michelle S., Robert, Ashley
-Current Members Tim Read (PI/Advisor)      Robert Petit (Senior Bioinformaticist)      Michelle Hargita (Senior Research Associate)      Michelle Su (MMG Graduate Student)      Jon Moller (MMG Graduate Student)      Ashley Alexander (PBEE Graduate Student)      Emily Wissel (SON Graduate Student)       Former Members Tauqeer Alam, Daniel Cox, Jamie Davis, Matthew Ezewudo, Michael Frisch, Chad Haase, Sandeep Joseph, Karla Passalacqua, Jessica Peterson, Kranthi Vavikolanu, Milton Tan</description>
+Current Members Tim Read (PI/Advisor)      Michelle Hargita (Senior Research Associate)      Robert Petit (Senior Bioinformaticist)      Jon Moller (MMG Graduate Student)      Michelle Su (MMG Graduate Student)      Ashley Alexander (PBEE Graduate Student)      Emily Wissel (SON Graduate Student)       Former Members Tauqeer Alam, Daniel Cox, Jamie Davis, Matthew Ezewudo, Michael Frisch, Chad Haase, Sandeep Joseph, Karla Passalacqua, Jessica Peterson, Kranthi Vavikolanu, Milton Tan</description>
     </item>
     
     <item>

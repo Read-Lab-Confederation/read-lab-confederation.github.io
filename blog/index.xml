@@ -17,7 +17,7 @@
       <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://read-lab-confederation.github.io/blog/posts/bacterial_strain_names/</guid>
-      <description>When working on bacterial bioinformatic projects, the public databases maintained by NCBI and other members of the International Nucleotide Sequence Database Collaboration (INSDC) are commonly featured as central resources. Two key concepts to know about working with these databases are BioProject and BioSample. These were created1 at NCBI as genome data began to gush in, at the beginning of the 2010s following the development of “second generation” sequencing technologies. The structure is mirrored between the INSDC databases, although IDs for the same data can be different.</description>
+      <description>The public databases maintained by NCBI and other members of the International Nucleotide Sequence Database Collaboration (INSDC) are central resources for bacterial bioinformatic analysis. Two key concepts to know about working with these databases are BioProject and BioSample. These were created1 at NCBI as genome data began to gush in, at the beginning of the 2010s following the development of “second generation” sequencing technologies. The structure is mirrored between the INSDC databases, although IDs for the same data can be different.</description>
     </item>
     
     <item>
