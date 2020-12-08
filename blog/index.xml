@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>Using AWS Batch to process 67,000 genomes with Bactopia</title>
+      <link>https://read-lab-confederation.github.io/blog/posts/bactopia-aws-and-67000-genomes/</link>
+      <pubDate>Mon, 07 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://read-lab-confederation.github.io/blog/posts/bactopia-aws-and-67000-genomes/</guid>
+      <description>In 5 days, I processed 67,000 Staphylococcus aureus genomes using Bactopia and Amazon Web Services (AWS). What would have taken 6 months using our local resources, was done in less than a week&amp;rsquo;s time. (magical)
+More importantly, in October 2019 I received an AWS Cloud Credits for Research award that expired on October 31, 2020. I had plenty of time, plenty. Well&amp;hellip; yeah&amp;hellip; out of nowhere October 2020 shows up and is all like &amp;ldquo;OH HIIII!</description>
+    </item>
+    
+    <item>
       <title>The strain of defining the bacterial strain</title>
       <link>https://read-lab-confederation.github.io/blog/posts/strain-definition/</link>
       <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>

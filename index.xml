@@ -6,10 +6,20 @@
     <description>Recent content on EMERGENT</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 15 Nov 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 07 Dec 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://read-lab-confederation.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Using AWS Batch to process 67,000 genomes with Bactopia</title>
+      <link>https://read-lab-confederation.github.io/blog/posts/bactopia-aws-and-67000-genomes/</link>
+      <pubDate>Mon, 07 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://read-lab-confederation.github.io/blog/posts/bactopia-aws-and-67000-genomes/</guid>
+      <description>In 5 days, I processed 67,000 Staphylococcus aureus genomes using Bactopia and Amazon Web Services (AWS). What would have taken 6 months using our local resources, was done in less than a week&amp;rsquo;s time. (magical)
+More importantly, in October 2019 I received an AWS Cloud Credits for Research award that expired on October 31, 2020. I had plenty of time, plenty. Well&amp;hellip; yeah&amp;hellip; out of nowhere October 2020 shows up and is all like &amp;ldquo;OH HIIII!</description>
+    </item>
     
     <item>
       <title>The strain of defining the bacterial strain</title>
@@ -124,7 +134,7 @@ Chlamydia Bacteria of the Chlamydia genus cause a wide range of infections in hu
       <guid>https://read-lab-confederation.github.io/group/</guid>
       <description>EMERGENT Group The Read lab is based in the School of Medicine, Division of Infectious Diseases at Emory University in Atlanta, Georgia.
 Read lab September 2019 L-R: Poulami (Fall rotation student), Jon, Tim, Michelle H (back), Michelle S., Robert, Ashley
-Current Members Tim Read (PI/Advisor)      Robert Petit (Senior Bioinformaticist)      Michelle Hargita (Senior Research Associate)      Jon Moller (MMG Graduate Student)      Ashley Alexander (PBEE Graduate Student)      Michelle Su (MMG Graduate Student)      Vishnu Raghuram (MMG Graduate Student)      Emily Wissel (SON Graduate Student)       Former Members Tauqeer Alam, Daniel Cox, Jamie Davis, Matthew Ezewudo, Michael Frisch, Chad Haase, Sandeep Joseph, Karla Passalacqua, Jessica Peterson, Kranthi Vavikolanu, Milton Tan</description>
+Current Members Tim Read (PI/Advisor)      Robert Petit (Senior Bioinformaticist)      Michelle Hargita (Senior Research Associate)      Michelle Su (MMG Graduate Student)      Jon Moller (MMG Graduate Student)      Ashley Alexander (PBEE Graduate Student)      Emily Wissel (SON Graduate Student)      Vishnu Raghuram (MMG Graduate Student)       Former Members Tauqeer Alam, Daniel Cox, Jamie Davis, Matthew Ezewudo, Michael Frisch, Chad Haase, Sandeep Joseph, Karla Passalacqua, Jessica Peterson, Kranthi Vavikolanu, Milton Tan</description>
     </item>
     
     <item>
