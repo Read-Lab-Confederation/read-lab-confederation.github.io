@@ -1,349 +1,38 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    
-    <title>EMERGENT  | Introduction to Bioconda on MacOS / Linux</title>
-    <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="generator" content="Hugo 0.54.0" />
-    
-    
-      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
-    
-
-    
-    
-      <link href="/dist/css/app.d98f2eb6bcd1eaedb7edf166bd16af26.css" rel="stylesheet">
-    
-
-    
-      <link rel="stylesheet" href="/css/custom.css">
-    
-
-    
-      
-    
-
-    
-
-    <meta property="og:title" content="Introduction to Bioconda on MacOS / Linux" />
-<meta property="og:description" content="Introduction to Bioconda on MacOS / Linux By Tim Read, October 2019
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge,chrome=1"><title>EMERGENT | Introduction to Bioconda on MacOS / Linux</title><meta name=viewport content="width=device-width,minimum-scale=1"><meta name=generator content="Hugo 0.79.1"><meta name=ROBOTS content="NOINDEX, NOFOLLOW"><link href=/dist/css/app.d98f2eb6bcd1eaedb7edf166bd16af26.css rel=stylesheet><link rel=stylesheet href=/css/custom.css><meta property="og:title" content="Introduction to Bioconda on MacOS / Linux"><meta property="og:description" content="Introduction to Bioconda on MacOS / Linux By Tim Read, October 2019
 What? Over the past few years, conda, an open-source package manager, has seen rapid growth in the number of available programs it distributes (via Anaconda Cloud). A useful feature of conda is it allows programs to be separated into channels. Bioconda is one of these channels specializing in maintaining bioinformatic software.
-Why? Installing open source software from source (ie the files containing the programs) is hard and time-consuming and often futile." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://read-lab-confederation.github.io/blog/posts/conda-intro/" />
-<meta property="article:published_time" content="2019-10-23T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2019-10-23T00:00:00&#43;00:00"/>
-
-<meta itemprop="name" content="Introduction to Bioconda on MacOS / Linux">
-<meta itemprop="description" content="Introduction to Bioconda on MacOS / Linux By Tim Read, October 2019
+Why? Installing open source software from source (ie the files containing the programs) is hard and time-consuming and often futile."><meta property="og:type" content="article"><meta property="og:url" content="https://read-lab-confederation.github.io/blog/posts/conda-intro/"><meta property="article:published_time" content="2019-10-23T00:00:00+00:00"><meta property="article:modified_time" content="2019-10-23T00:00:00+00:00"><meta itemprop=name content="Introduction to Bioconda on MacOS / Linux"><meta itemprop=description content="Introduction to Bioconda on MacOS / Linux By Tim Read, October 2019
 What? Over the past few years, conda, an open-source package manager, has seen rapid growth in the number of available programs it distributes (via Anaconda Cloud). A useful feature of conda is it allows programs to be separated into channels. Bioconda is one of these channels specializing in maintaining bioinformatic software.
-Why? Installing open source software from source (ie the files containing the programs) is hard and time-consuming and often futile.">
-
-
-<meta itemprop="datePublished" content="2019-10-23T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2019-10-23T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="904">
-
-
-
-<meta itemprop="keywords" content="" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Introduction to Bioconda on MacOS / Linux"/>
-<meta name="twitter:description" content="Introduction to Bioconda on MacOS / Linux By Tim Read, October 2019
+Why? Installing open source software from source (ie the files containing the programs) is hard and time-consuming and often futile."><meta itemprop=datePublished content="2019-10-23T00:00:00+00:00"><meta itemprop=dateModified content="2019-10-23T00:00:00+00:00"><meta itemprop=wordCount content="904"><meta itemprop=keywords content><meta name=twitter:card content="summary"><meta name=twitter:title content="Introduction to Bioconda on MacOS / Linux"><meta name=twitter:description content="Introduction to Bioconda on MacOS / Linux By Tim Read, October 2019
 What? Over the past few years, conda, an open-source package manager, has seen rapid growth in the number of available programs it distributes (via Anaconda Cloud). A useful feature of conda is it allows programs to be separated into channels. Bioconda is one of these channels specializing in maintaining bioinformatic software.
-Why? Installing open source software from source (ie the files containing the programs) is hard and time-consuming and often futile."/>
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-148959477-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
-    <link href="/css/share-button.css" rel="stylesheet">
-  </head>
-
-  <body class="ma0 avenir bg-near-white">
-
-    
-   
-  
-
-  
-  
-  <header class="cover bg-top" style="background-image: url('https://read-lab-confederation.github.io/images/bioconda.png');">
-    <div class="pb3-m pb6-l bg-black-60">
-      <nav class="pv3 ph3 ph4-ns tc tl-l" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a href="https://read-lab-confederation.github.io" class="f3 fw2 hover-white no-underline white-90 dib">
-      EMERGENT
-    </a>
-    <div class="flex-l items-center">
-      
-
-      
-        <ul class="pl0 mr3">
-          
-          <li class="list f7 f4-ns fw4 dib pr1 pr3-ns">
-            <a class="hover-white no-underline white-90" href="/about/" title="About page">
-              About
-            </a>
-          </li>
-          
-          <li class="list f7 f4-ns fw4 dib pr1 pr3-ns">
-            <a class="hover-white no-underline white-90" href="/blog/" title="Blog page">
-              Blog
-            </a>
-          </li>
-          
-          <li class="list f7 f4-ns fw4 dib pr1 pr3-ns">
-            <a class="hover-white no-underline white-90" href="/group/" title="Group page">
-              Group
-            </a>
-          </li>
-          
-          <li class="list f7 f4-ns fw4 dib pr1 pr3-ns">
-            <a class="hover-white no-underline white-90" href="/research/" title="Research page">
-              Research
-            </a>
-          </li>
-          
-          <li class="list f5 f4-ns fw4 dib pr1 pr3-ns">
-
-
-
-<a href="https://twitter.com/tdread_emory" target="_blank" class="link-transition twitter link dib z-999 pt0-l mr1" title="Twitter link" rel="noopener" aria-label="follow on Twitter——Opens in a new window">
-  <svg height="24px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="24px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
-
-<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
-<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
-</svg>
-</span></a>
-
-
-
-
-
-
-
-
-</li>
-        </ul>
-      
-    </div>
-  </div>
-</nav>
-
-      <div class="tc-l pv6-l pv4 ph3 ph4-ns">
-        
-          <h1 class="dib-ns dn f1-ns fw2 white-90 mb0 lh-title">Introduction to Bioconda on MacOS / Linux</h1>
-          
-        
-      </div>
-    </div>
-  </header>
-
-
-
-    <main class="pb7" role="main">
-      
-  
-  <article class="flex-l flex-wrap justify-between mw8 center ph3">
-
-    <header class="mt4 w-100">
-      <p class="f6 b helvetica tracked">
-          
-        POSTS
-      </p>
-      <h1 class="f1-ns f4 athelas mb1">Introduction to Bioconda on MacOS / Linux</h1>
-      <time class="f6 dib tracked" datetime="2019-10-23T00:00:00Z">October 23, 2019</time>
-      
-
-<div class="author-info">
-        <p class="author-name">
-        
-            
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                 
-                    
-                        Tim Read
-                    
-                
-            
-        
-    </p>
-</div>
-      
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-
-      
-      
-      
-    </header>
-
-    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
-
-<h1 id="introduction-to-bioconda-on-macos-linux">Introduction to Bioconda on MacOS / Linux</h1>
-
-<p>By Tim Read, October 2019</p>
-
-<h2 id="what">What?</h2>
-
-<p>Over the past few years, <a href="https://docs.conda.io/en/latest/">conda</a>, an open-source package manager, has seen rapid growth in the number of available programs it distributes (via <a href="https://anaconda.org/">Anaconda Cloud</a>). A useful feature of conda is it allows programs to be separated into channels. <a href="https://bioconda.github.io/">Bioconda</a> is one of these channels specializing in maintaining bioinformatic software.</p>
-
-<h2 id="why">Why?</h2>
-
-<p>Installing open source software from source (ie the files containing the programs) is hard and time-consuming and often futile.  Bioconda is not perfect but it’s much better than solving the complex riddle of software installation on your own.  It’s a one-stop-shop - with more than 6,000 packages (May 2019) developed and ready to deploy.  It makes your projects more reproducible and easier to update.  Because you don&rsquo;t usually need admin permission to load software onto your own area, it is perfect for use on shared servers.</p>
-
-<h2 id="installing-miniconda">Installing Miniconda</h2>
-
-<p>Most Bioconda installs use a stripped-down version of conda called Miniconda.  Installation information is <a href="https://conda.io/projects/conda/en/latest/user-guide/install/index.html">here</a>.  I performed the following steps on MacOS 10.15 but they should work for other versions (and Linux will also be pretty similar).  First download the Python 3 version of Miniconda with the bash (.sh) installer using either <code>wget</code> or <code>curl</code>.</p>
-
-<pre><code>wget -O ~/miniconda.sh \
+Why? Installing open source software from source (ie the files containing the programs) is hard and time-consuming and often futile."><script type=application/javascript>var doNotTrack=false;if(!doNotTrack){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create','UA-148959477-1','auto');ga('send','pageview');}</script><script async src=https://www.google-analytics.com/analytics.js></script><link href=/css/share-button.css rel=stylesheet></head><body class="ma0 avenir bg-near-white"><header class="cover bg-top" style=background-image:url(https://read-lab-confederation.github.io/images/bioconda.png)><div class="pb3-m pb6-l bg-black-60"><nav class="pv3 ph3 ph4-ns tc tl-l" role=navigation><div class="flex-l justify-between items-center center"><a href=https://read-lab-confederation.github.io class="f3 fw2 hover-white no-underline white-90 dib">EMERGENT</a><div class="flex-l items-center"><ul class="pl0 mr3"><li class="list f7 f4-ns fw4 dib pr1 pr3-ns"><a class="hover-white no-underline white-90" href=/about/ title="About page">About</a></li><li class="list f7 f4-ns fw4 dib pr1 pr3-ns"><a class="hover-white no-underline white-90" href=/blog/ title="Blog page">Blog</a></li><li class="list f7 f4-ns fw4 dib pr1 pr3-ns"><a class="hover-white no-underline white-90" href=/group/ title="Group page">Group</a></li><li class="list f7 f4-ns fw4 dib pr1 pr3-ns"><a class="hover-white no-underline white-90" href=/research/ title="Research page">Research</a></li><li class="list f5 f4-ns fw4 dib pr1 pr3-ns"><a href=https://twitter.com/tdread_emory target=_blank class="link-transition twitter link dib z-999 pt0-l mr1" title="Twitter link" rel=noopener aria-label="follow on Twitter——Opens in a new window"><svg height="24" style="enable-background:new 0 0 67 67" viewBox="0 0 67 67" width="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167 22.283c-2.619.953-4.274 3.411-4.086 6.101l.063 1.038-1.048-.127c-3.813-.487-7.145-2.139-9.974-4.915l-1.383-1.377-.356 1.017c-.754 2.267-.272 4.661 1.299 6.271.838.89.649 1.017-.796.487-.503-.169-.943-.296-.985-.233-.146.149.356 2.076.754 2.839.545 1.06 1.655 2.097 2.871 2.712l1.027.487-1.215.021c-1.173.0-1.215.021-1.089.467.419 1.377 2.074 2.839 3.918 3.475l1.299.444-1.131.678c-1.676.976-3.646 1.526-5.616 1.568C19.775 43.256 19 43.341 19 43.405c0 .211 2.557 1.397 4.044 1.864 4.463 1.377 9.765.783 13.746-1.568 2.829-1.673 5.657-5 6.978-8.221.713-1.716 1.425-4.851 1.425-6.354.0-.975.063-1.102 1.236-2.267.692-.678 1.341-1.419 1.467-1.631.21-.403.188-.403-.88-.043-1.781.636-2.033.551-1.152-.402.649-.678 1.425-1.907 1.425-2.267.0-.063-.314.042-.671.233-.377.212-1.215.53-1.844.72l-1.131.361-1.027-.7c-.566-.381-1.361-.805-1.781-.932C39.766 21.902 38.131 21.944 37.167 22.283zM33 64C16.432 64 3 50.569 3 34S16.432 4 33 4s30 13.431 30 30S49.568 64 33 64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:"/></svg><span class=new-window><svg height="8" style="enable-background:new 0 0 1000 1000" viewBox="0 0 1e3 1e3" width="8" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M598 128h298v298h-86V274L392 692l-60-60 418-418H598v-86zM810 810V512h86v298c0 46-40 86-86 86H214c-48 0-86-40-86-86V214c0-46 38-86 86-86h298v86H214v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:"/></svg></span></a></li></ul></div></div></nav><div class="tc-l pv6-l pv4 ph3 ph4-ns"><h1 class="dib-ns dn f1-ns fw2 white-90 mb0 lh-title">Introduction to Bioconda on MacOS / Linux</h1></div></div></header><main class=pb7 role=main><article class="flex-l flex-wrap justify-between mw8 center ph3"><header class="mt4 w-100"><p class="f6 b helvetica tracked">POSTS</p><h1 class="f3-ns f4 athelas mb1">Introduction to Bioconda on MacOS / Linux</h1><time class="f6 dib tracked" datetime=2019-10-23T00:00:00Z>October 23, 2019</time><div class=author-info><p class=author-name>Tim Read</p></div></header><section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-80-l"><h1 id=introduction-to-bioconda-on-macos--linux>Introduction to Bioconda on MacOS / Linux</h1><p>By Tim Read, October 2019</p><h2 id=what>What?</h2><p>Over the past few years, <a href=https://docs.conda.io/en/latest/>conda</a>, an open-source package manager, has seen rapid growth in the number of available programs it distributes (via <a href=https://anaconda.org/>Anaconda Cloud</a>). A useful feature of conda is it allows programs to be separated into channels. <a href=https://bioconda.github.io/>Bioconda</a> is one of these channels specializing in maintaining bioinformatic software.</p><h2 id=why>Why?</h2><p>Installing open source software from source (ie the files containing the programs) is hard and time-consuming and often futile. Bioconda is not perfect but it’s much better than solving the complex riddle of software installation on your own. It’s a one-stop-shop - with more than 6,000 packages (May 2019) developed and ready to deploy. It makes your projects more reproducible and easier to update. Because you don&rsquo;t usually need admin permission to load software onto your own area, it is perfect for use on shared servers.</p><h2 id=installing-miniconda>Installing Miniconda</h2><p>Most Bioconda installs use a stripped-down version of conda called Miniconda. Installation information is <a href=https://conda.io/projects/conda/en/latest/user-guide/install/index.html>here</a>. I performed the following steps on MacOS 10.15 but they should work for other versions (and Linux will also be pretty similar). First download the Python 3 version of Miniconda with the bash (.sh) installer using either <code>wget</code> or <code>curl</code>.</p><pre><code>wget -O ~/miniconda.sh \
     https://repo.anaconda.com/miniconda/Miniconda4-latest-MacOSX-x86_64.sh 
-</code></pre>
-
-<p>Or..</p>
-
-<pre><code>curl -o ~/miniconda.sh \
+</code></pre><p>Or..</p><pre><code>curl -o ~/miniconda.sh \
     https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
-</code></pre>
-
-<p>Then run the bash installer script.</p>
-
-<pre><code>bash miniconda.sh 
-</code></pre>
-
-<p>Accept the licenses and follow the instructions.  I just accepted all the default install options.</p>
-
-<p>I opened a new terminal and confirmed install by checking version.</p>
-
-<pre><code>conda --version
+</code></pre><p>Then run the bash installer script.</p><pre><code>bash miniconda.sh 
+</code></pre><p>Accept the licenses and follow the instructions. I just accepted all the default install options.</p><p>I opened a new terminal and confirmed install by checking version.</p><pre><code>conda --version
 
 conda 4.7.10
-</code></pre>
-
-<h3 id="for-some-users-installation-in-zshell">For some users: installation in Zshell</h3>
-
-<p>On mac OSX 10.15 zsh (Zshell) is the new default shell in the terminal application.  Here are the <a href="https://support.apple.com/en-us/HT208050">gnarly details</a>.  It may also be the default on some Linux systems.  You can check which shell you are in by typing,</p>
-
-<pre><code>echo “$SHELL”
-</code></pre>
-
-<p>If you want to make things easy you can change to the bash shell by this command.</p>
-
-<pre><code>chsh -s /bin/bash
-</code></pre>
-
-<p>If you use zsh, you will have to set the $PATH environment variable for conda manually. This is done by adding the following line to the end of your zsh profile (typically <code>~/.zshrc</code>).</p>
-
-<pre><code>export PATH=&quot;/Users/YOUR_USER_NAME/miniconda3/bin:$PATH&quot;
-</code></pre>
-
-<h2 id="using-bioconda">Using Bioconda</h2>
-
-<p>Bioconda is actually a specific channel within the greater conda project (<a href="https://bioconda.github.io">https://bioconda.github.io</a>).  To install the Bioconda channel, I followed the <a href="https://bioconda.github.io/user/install.html#set-up-channels">Bioconda&rsquo;s recommended channel ordering</a> using the commands below in the exact order:</p>
-
-<pre><code>conda config --add channels defaults
+</code></pre><h3 id=for-some-users-installation-in-zshell>For some users: installation in Zshell</h3><p>On mac OSX 10.15 zsh (Zshell) is the new default shell in the terminal application. Here are the <a href=https://support.apple.com/en-us/HT208050>gnarly details</a>. It may also be the default on some Linux systems. You can check which shell you are in by typing,</p><pre><code>echo “$SHELL”
+</code></pre><p>If you want to make things easy you can change to the bash shell by this command.</p><pre><code>chsh -s /bin/bash
+</code></pre><p>If you use zsh, you will have to set the $PATH environment variable for conda manually. This is done by adding the following line to the end of your zsh profile (typically <code>~/.zshrc</code>).</p><pre><code>export PATH=&quot;/Users/YOUR_USER_NAME/miniconda3/bin:$PATH&quot;
+</code></pre><h2 id=using-bioconda>Using Bioconda</h2><p>Bioconda is actually a specific channel within the greater conda project (<a href=https://bioconda.github.io>https://bioconda.github.io</a>). To install the Bioconda channel, I followed the <a href=https://bioconda.github.io/user/install.html#set-up-channels>Bioconda&rsquo;s recommended channel ordering</a> using the commands below in the exact order:</p><pre><code>conda config --add channels defaults
 conda config --add channels bioconda
 conda config --add channels conda-forge
-</code></pre>
-
-<p>To explore the tools available on Bioconda and get their recipe names, use the search dialog available at the Bioconda site <a href="https://bioconda.github.io/">https://bioconda.github.io/</a></p>
-
-<h2 id="environments">Environments</h2>
-
-<p>Environments are a useful feature of conda.  These are directories with particular subsets of software.  By building environments for a particular purpose you can reduce the confusion created when, for instance, different tools specify different versions of the same software. The default environment is called <em>base</em>. For more information about environments an <a href="https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html?highlight=environment">in-depth discussion is available</a>.</p>
-
-<h3 id="example-environment-creation">Example Environment Creation</h3>
-
-<p>For this demonstration, I want to create an environment called <em>Blaster</em> and have contain the programs: <a href="[http://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs](http://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs)">NCBI blast</a>, <a href="[http://www.drive5.com/muscle/](http://www.drive5.com/muscle/)">muscle aligner</a>, and <a href="[https://github.com/kblin/ncbi-genome-download/](https://github.com/kblin/ncbi-genome-download/)">ncbi-genome-download </a>. This can be done with <code>conda create</code>:</p>
-
-<pre><code>conda create -n Blaster blast muscle ncbi-genome-download
-</code></pre>
-
-<p>The command above will find the packages and install any dependencies into the newly-created <em>Blaster</em> environment.</p>
-
-<h3 id="activating-and-deactivating-environments">Activating and Deactivating Environments</h3>
-
-<p>To check the available environments:</p>
-
-<pre><code>conda info --envs
+</code></pre><p>To explore the tools available on Bioconda and get their recipe names, use the search dialog available at the Bioconda site <a href=https://bioconda.github.io/>https://bioconda.github.io/</a></p><h2 id=environments>Environments</h2><p>Environments are a useful feature of conda. These are directories with particular subsets of software. By building environments for a particular purpose you can reduce the confusion created when, for instance, different tools specify different versions of the same software. The default environment is called <em>base</em>. For more information about environments an <a href="https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html?highlight=environment">in-depth discussion is available</a>.</p><h3 id=example-environment-creation>Example Environment Creation</h3><p>For this demonstration, I want to create an environment called <em>Blaster</em> and have contain the programs: <a href="%5Bhttp://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs%5D(http://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs)">NCBI blast</a>, <a href=%5Bhttp://www.drive5.com/muscle/%5D(http://www.drive5.com/muscle/)>muscle aligner</a>, and <a href=%5Bhttps://github.com/kblin/ncbi-genome-download/%5D(https://github.com/kblin/ncbi-genome-download/)>ncbi-genome-download </a>. This can be done with <code>conda create</code>:</p><pre><code>conda create -n Blaster blast muscle ncbi-genome-download
+</code></pre><p>The command above will find the packages and install any dependencies into the newly-created <em>Blaster</em> environment.</p><h3 id=activating-and-deactivating-environments>Activating and Deactivating Environments</h3><p>To check the available environments:</p><pre><code>conda info --envs
 # conda environments:
 #
 base                  *  /Users/timothyread/miniconda3
 Blaster                  /Users/timothyread/miniconda3/envs/Blaster
-</code></pre>
-
-<p>This reports the environments and their paths and notes which environment is active (the asterisk*).  At the moment <em>base</em> is the active environment. Because the programs just downloaded are available in the <em>Blaster</em> environment, you can’t run them from base.</p>
-
-<p>To activate <em>Blaster</em>, use <code>conda activate</code>:</p>
-
-<pre><code>conda activate Blaster
-</code></pre>
-
-<p>This switches the conda environment from <em>base</em> to <em>Blaster</em>. This switch is reflected in <code>conda info</code>:</p>
-
-<pre><code>conda info --envs
+</code></pre><p>This reports the environments and their paths and notes which environment is active (the asterisk*). At the moment *base* is the active environment. Because the programs just downloaded are available in the *Blaster* environment, you can’t run them from base.</p><p>To activate <em>Blaster</em>, use <code>conda activate</code>:</p><pre><code>conda activate Blaster
+</code></pre><p>This switches the conda environment from <em>base</em> to <em>Blaster</em>. This switch is reflected in <code>conda info</code>:</p><pre><code>conda info --envs
 # conda environments:
 #
 base                     /Users/timothyread/miniconda3
 Blaster               *  /Users/timothyread/miniconda3/envs/Blaster
-</code></pre>
-
-<p>This shows <em>Blaster</em> is now the active environment.  In this environment, BLAST, Muscle and NCBI Genome Download are now available.  You can confirm this by typing, for example,</p>
-
-<pre><code>blastn -help
-</code></pre>
-
-<p>To deactivate the environment.</p>
-
-<pre><code>conda deactivate
-</code></pre>
-
-<p>Now the environment is switched back to <em>base</em>. BLAST, Muscle and NCBI Genome Download will no longer be available, unless of course they were already in your PATH.</p>
-
-<h2 id="getting-more-information">Getting more information</h2>
-
-<p>To see a list of tools available in your current environment, you can use <code>conda list</code>:</p>
-
-<pre><code>conda list
+</code></pre><p>This shows <em>Blaster</em> is now the active environment. In this environment, BLAST, Muscle and NCBI Genome Download are now available. You can confirm this by typing, for example,</p><pre><code>blastn -help
+</code></pre><p>To deactivate the environment.</p><pre><code>conda deactivate
+</code></pre><p>Now the environment is switched back to <em>base</em>. BLAST, Muscle and NCBI Genome Download will no longer be available, unless of course they were already in your PATH.</p><h2 id=getting-more-information>Getting more information</h2><p>To see a list of tools available in your current environment, you can use <code>conda list</code>:</p><pre><code>conda list
 # packages in environment at /Users/timothyread/miniconda3:
 #
 # Name                    Version                   Build  Channel
@@ -356,67 +45,7 @@ chardet                   3.0.4                    py37_1
 conda                     4.7.10                   py37_0  
 conda-package-handling    1.3.11                   py37_0  
 … etc , etc
-</code></pre>
-
-<h2 id="updating-conda-and-tools">Updating Conda and Tools</h2>
-
-<p>To update the version of conda or a specific tool, use <code>conda update</code>:</p>
-
-<pre><code>conda update conda
+</code></pre><h2 id=updating-conda-and-tools>Updating Conda and Tools</h2><p>To update the version of conda or a specific tool, use <code>conda update</code>:</p><pre><code>conda update conda
 # OR 
 conda update TOOL_NAME
-</code></pre>
-
-<h2 id="strategies-for-using-environments">Strategies for using environments</h2>
-
-<p>It’s best to download all packages in the environment at once (ie at creation and update time).  This is a more efficient way to resolve program dependencies than iterative accumulation, which can lead to very long <em>solving environment</em> wait times.</p>
-
-<p>Keep separate environments for different projects/workflows.  Don’t worry about possible redundant installation of the same package in different environments - these days, programs in general take up insignificant hard drive space compared to data.</p>
-
-<h2 id="further-information">Further information</h2>
-
-<p>Obviously there is much more to conda and Bioconda than detailed in this brief intro.  To find out more, start with the links in this document or poke around with Google.  Have fun!</p>
-<ul class="pa0">
-  
-</ul>
-<div class="mt6">
-      
-      
-      </div>
-    </section>
-
-    <aside class="w-30-l mt6-l">
-
-
-
-
-</aside>
-
-  </article>
-
-    </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://read-lab-confederation.github.io" >
-    &copy; 2019 EMERGENT
-  </a>
-    <div>
-        <a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?text=Check out EMERGENT, a bacterial genomics and metagenomics blog from @tdread_emory's group!&amp;url=https://read-lab-confederation.github.io" target="_blank" rel="noopener" aria-label="Share on Twitter">
-          <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--large"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.44 4.83c-.8.37-1.5.38-2.22.02.93-.56.98-.96 1.32-2.02-.88.52-1.86.9-2.9 1.1-.82-.88-2-1.43-3.3-1.43-2.5 0-4.55 2.04-4.55 4.54 0 .36.03.7.1 1.04-3.77-.2-7.12-2-9.36-4.75-.4.67-.6 1.45-.6 2.3 0 1.56.8 2.95 2 3.77-.74-.03-1.44-.23-2.05-.57v.06c0 2.2 1.56 4.03 3.64 4.44-.67.2-1.37.2-2.06.08.58 1.8 2.26 3.12 4.25 3.16C5.78 18.1 3.37 18.74 1 18.46c2 1.3 4.4 2.04 6.97 2.04 8.35 0 12.92-6.92 12.92-12.93 0-.2 0-.4-.02-.6.9-.63 1.96-1.22 2.56-2.14z"/></svg>
-            </div>Share on Twitter</div>
-        </a>
-    </div>
-  </div>
-</footer>
-
-    
-      
-
-  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
-
-
-      <script src="/js/custom.js"></script>
-    
-  </body>
-</html>
+</code></pre><h2 id=strategies-for-using-environments>Strategies for using environments</h2><p>It’s best to download all packages in the environment at once (ie at creation and update time). This is a more efficient way to resolve program dependencies than iterative accumulation, which can lead to very long <em>solving environment</em> wait times.</p><p>Keep separate environments for different projects/workflows. Don’t worry about possible redundant installation of the same package in different environments - these days, programs in general take up insignificant hard drive space compared to data.</p><h2 id=further-information>Further information</h2><p>Obviously there is much more to conda and Bioconda than detailed in this brief intro. To find out more, start with the links in this document or poke around with Google. Have fun!</p><ul class=pa0></ul><div class=mt6></div></section><aside class="w-30-l mt6-l"></aside></article></main><footer class="bg-black bottom-0 w-100 pa3" role=contentinfo><div class="flex justify-between"><a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href=https://read-lab-confederation.github.io>&copy; 2021 EMERGENT</a><div><a class=resp-sharing-button__link href="https://twitter.com/intent/tweet/?text=Check out EMERGENT, a bacterial genomics and metagenomics blog from @tdread_emory's group!&url=https://read-lab-confederation.github.io" target=_blank rel=noopener aria-label="Share on Twitter"><div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--large"><div aria-hidden=true class="resp-sharing-button__icon resp-sharing-button__icon--solid"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.44 4.83c-.8.37-1.5.38-2.22.02.93-.56.98-.96 1.32-2.02-.88.52-1.86.9-2.9 1.1-.82-.88-2-1.43-3.3-1.43-2.5.0-4.55 2.04-4.55 4.54.0.36.03.7.1 1.04-3.77-.2-7.12-2-9.36-4.75-.4.67-.6 1.45-.6 2.3.0 1.56.8 2.95 2 3.77-.74-.03-1.44-.23-2.05-.57v.06c0 2.2 1.56 4.03 3.64 4.44-.67.2-1.37.2-2.06.08.58 1.8 2.26 3.12 4.25 3.16C5.78 18.1 3.37 18.74 1 18.46c2 1.3 4.4 2.04 6.97 2.04 8.35.0 12.92-6.92 12.92-12.93.0-.2.0-.4-.02-.6.9-.63 1.96-1.22 2.56-2.14z"/></svg></div>Share on Twitter</div></a></div></div></footer><script src=/dist/js/app.3fc0f988d21662902933.js></script><script src=/js/custom.js></script></body></html>

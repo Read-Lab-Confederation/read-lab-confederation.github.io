@@ -1,0 +1,37 @@
+{{- $function := index .Params 0 -}}
+{{ if eq $function "group_picture" }}
+    {{- $image := index .Params 1 -}}
+    {{- $caption := index .Params 2 -}}
+    <img src="{{ $image }}" alt="Group Picture">
+    <p class="footnote">{{ $caption }}</p>
+{{ else if eq $function "current_members" }}
+    <div class="flex flex-wrap">
+    {{ range sort $.Site.Data.group ".weight" }}
+        {{ if .display_name }}
+                {{ $slug := printf "%s-%s" .first_name .last_name | lower}}
+                {{ $image := printf "static/images/group/%s.jpg" $slug}}
+                <div class="w-30 pa3 mr2">
+                    <a href="/group/{{$slug}}/">
+                    <div class="group-image-container">
+                        {{ if (fileExists (printf "static/images/group/%s.jpg" $slug)) -}}
+                            <img src="/images/group/{{$slug}}.jpg" alt="{{ .display_name }}" class="profile-image">
+                        {{ else if (fileExists (printf "static/images/group/%s.png" $slug)) }}
+                             <img src="/images/group/{{$slug}}.png" alt="{{ .display_name }}" class="profile-image">
+                        {{ else }}
+                            <img src="/images/group/blank.png" alt="{{ .display_name }}" class="profile-image">
+                        {{ end }}
+                      <div class="group-image-overlay">
+                        {{ if eq .display_name "Tim Read"}}
+                            <div class="group-image-text">{{ .display_name }} (PI/Advisor) </div>
+                        {{ else }}
+                            <div class="group-image-text">{{ .display_name }} ({{ .position }}) </div>
+                        {{ end }}
+                      </div>
+                    </div>
+                    </a>
+                </div>
+        {{ end }}
+    {{ end}}
+    </div>
+{{ end }}
+
