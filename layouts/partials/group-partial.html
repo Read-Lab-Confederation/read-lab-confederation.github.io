@@ -1,0 +1,54 @@
+{{ $person := .File.TranslationBaseName }}
+{{ range $.Site.Data.group}}
+    {{ $slug := printf "%s-%s" .first_name .last_name | lower}}
+    {{ if eq $person $slug }}
+    <div class="db pv4 ph3 ph0-l no-underline dark-gray w-100">
+        <div class="flex flex-column flex-row-ns">
+            <div class="pr3-ns mb4 mb0-ns w-50-ns">
+                <h1 class="f2 athelas mb1">
+                    {{ .display_name }}
+                </h1>
+                <p class="position">
+                    {{ .position }}
+                </p>
+                <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+                    <p class="research">
+                        {{ if .social.google_scholar }}
+                            <a href="{{.social.google_scholar}}" target="_blank">Google Scholar</a>
+                        {{ end }}
+                        {{ if .social.ncbi_bibliography }}
+                            <a href="{{.social.ncbi_bibliography}}" target="_blank">Bibliography</a>
+                        {{ end }}
+                    </p>
+                    {{ if .social.twitter }}
+                        <p class="social twitter">
+                            Twitter: <a href="https://twitter.com/{{.social.twitter}}" target="_blank">@{{.social.twitter}}</a>
+                        </p>
+                    {{ end }}
+                    {{ if .social.github }}
+                        <p class="social github">
+                            GitHub: <a href="https://github.com/{{.social.github}}" target="_blank">@{{.social.github}}</a>
+                        </p>
+                    {{ end }}
+                    {{ if .social.orcid }}
+                        <p class="social orcid">
+                            ORCID: <a href="https://orcid.org/{{.social.orcid}}" target="_blank">{{.social.orcid}}</a>
+                        </p>
+                    {{ end }}
+                </div>
+            </div>
+            <div class="blah w-30-ns pt4">
+                {{ $jpg := printf "static/images/group/%s.jpg" $slug}}
+                {{ $png := printf "static/images/group/%s.png" $slug}}
+                {{ if (fileExists $jpg) -}}
+                    <img src="/images/group/{{$slug}}.jpg" alt="{{ .display_name }}" class="profile-image">
+                {{ else if (fileExists $png)}}
+                    <img src="/images/group/{{$slug}}.png" alt="{{ .display_name }}" class="profile-image">
+                {{ else }}
+                    <img src="/images/group/blank.png" alt="{{ .display_name }}" class="profile-image">
+                {{ end }}
+            </div>
+        </div>
+    </div>
+    {{ end }}
+{{ end }}

@@ -1,0 +1,59 @@
+title = "EMERGENT"
+baseURL = "https://read-lab-confederation.github.io"
+languageCode = "en-us"
+theme = "gohugo-theme-ananke"
+staticDir = ["static"]
+
+MetaDataFormat = "yaml"
+DefaultContentLanguage = "en"
+SectionPagesMenu = "main"
+Paginate = 3 # this is set low for demonstrating with dummy content. Set to a higher number
+googleAnalytics = "UA-148959477-1"
+enableRobotsTXT = true
+
+[taxonomies]
+  group = "group"
+
+[[menu.main]]
+    name = "About"
+    identifier = "about"
+    title = "About"
+    url = "/about/"
+[[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    title = "blog section"
+    url = "/blog/"
+[[menu.main]]
+    identifier = "research"
+    name = "Research"
+    title = "research section"
+    url = "/research/"
+[[menu.main]]
+    identifier = "group"
+    name = "Group"
+    title = "group section"
+    url = "/group/"
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+[params]
+  favicon = ""
+  description = "EMory bactERial GEnomics aNd meTagenomics"
+  facebook = ""
+  twitter = "https://twitter.com/tdread_emory"
+  instagram = ""
+  youtube = ""
+  github = ""
+  gitlab = ""
+  linkedin = ""
+  mastodon = ""
+  # choose a background color from any on this page: http://tachyons.io/docs/themes/skins/ and preface it with "bg-"
+  background_color_class = "bg-black"
+  featured_image = "/images/USA500_circle.png"
+  recent_posts_number = 5
+  custom_css = ["css/custom.css"]
+  mainSections = ["blog"]

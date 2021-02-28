@@ -1,0 +1,6 @@
+{{- $platform := index .Params 0 -}}
+{{ if eq $platform "github" }}
+    {{- $username := index .Params 1 -}}
+    <a href="https://orcid.org/{{$username}}">@{{$username}}</a>
+{{ end }}
+
