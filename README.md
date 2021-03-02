@@ -32,6 +32,7 @@ This folder contains profile information (in Markdown format) for each member of
 ##### `data/group`
 This folder contains JSON files for each member of EMERGENT. The JSON files contain variables related to social networks, names, etc. The JSON files should be named the same as the group Markdown files (`${firstname}-${lastname}.json`).
 
+
 ##### `static/images`
 This folder is where you should place any images related to a blog post.
 
