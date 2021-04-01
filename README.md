@@ -43,3 +43,6 @@ This folder is where you should place an image (either PNG or JPG) of yourself. 
 
 ### Template/Layout Related Folders
 The **archetypes**, **layouts**, and **themes** directories are for the layout of the blog. It should be very rare that you need to change anything in these directories. So, please feel free to ignore these directories.
+
+### Actions
+To check ststus and history of website updates click the "Actions" button at the top of the window.
