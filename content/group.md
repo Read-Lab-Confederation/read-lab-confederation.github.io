@@ -7,7 +7,7 @@ type: "group"
 ### EMERGENT Group
 The Read lab is based in the School of Medicine, Division of Infectious Diseases at  Emory University in Atlanta, Georgia.
 
-{{< group "group_picture" "/images/Group-2021-03-26.png" “March 2021 L-R Top: Jon, Tim, Emily; Middle: Bri, Robert, Vishnu, Michelle S, Brooke, Ashley” >}}
+{{< group "group_picture" "/images/Group-2021-03-26.png" "March 2021 L-R Top: Jon, Tim, Emily; Middle: Bri, Robert, Vishnu, Michelle S, Brooke, Ashley" >}}
 
 ### Current Members
 
