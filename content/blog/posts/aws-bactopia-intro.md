@@ -2,7 +2,7 @@
 title: “Bactopia on AWS: step by step guide”
 description: ""
 author: ["Tim Read"]
-date: 2021-05-15
+date: ‘2021-05-15’
 featured_image: "/images/aws-bactopia-image3.png"
 draft: false
 ---
