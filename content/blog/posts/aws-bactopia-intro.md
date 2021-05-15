@@ -1,5 +1,5 @@
 ---
-title: “Bactopia” on AWS: step by step guide
+title: “Bactopia on AWS: step by step guide”
 description: ""
 author: ["Tim Read"]
 date: 2021-05-15
