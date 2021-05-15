@@ -1,13 +1,13 @@
 ---
-title: “A step by step guide to Bactopia on AWS”
+title: “Running Bactopia on Amazon Web Services”
 description: ""
 author: ["Tim Read"]
-date: 2021-05-15
+date: "2021-05-15"
 featured_image: "/images/aws-bactopia-image3.png"
 draft: false
 ---
 
-# Bactopia on AWS: step by step guide 
+# Running Bactopia on Amazon Web Services 
 
 
 ## Intro to Bactopia
