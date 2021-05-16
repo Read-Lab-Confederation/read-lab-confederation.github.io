@@ -1,5 +1,5 @@
 ---
-title: “An introduction to running Bactopia on Amazon Web Services”
+title: An introduction to running Bactopia on Amazon Web Services
 description: ""
 author: ["Tim Read"]
 date: "2021-05-15"
@@ -7,9 +7,7 @@ featured_image: "/images/aws-bactopia-image3.png"
 draft: false
 ---
 
-## Intro to Bactopia
-
-[Bactopia](https://bactopia.github.io/) is a software pipeline for complete analysis of bacterial genomes<sup><a href="https://doi.org/10.1128/mSystems.00190-20">1</a></sup>, developed by [Robert Petit](https://www.robertpetit.com/).  Bactopia is based on the [Nextflow](https://www.nextflow.io/) bioinformatic workflow software. One of the many virtues of Nextflow is its adaptability to different compute environments, so I thought I would play around a bit with [Amazon Web Services](https://aws.amazon.com/) (AWS).
+[Bactopia](https://bactopia.github.io/) is a [software pipeline for complete analysis of bacterial genomes](https://doi.org/10.1128/mSystems.00190-20), developed by [Robert Petit](https://www.robertpetit.com/).  Bactopia is based on the [Nextflow](https://www.nextflow.io/) bioinformatic workflow software. One of the many virtues of Nextflow is its adaptability to different compute environments, so I thought I would play around a bit with [Amazon Web Services](https://aws.amazon.com/) (AWS).
 
 
 ## AWS Strategies 
@@ -21,7 +19,7 @@ There are infinite strategies for setting up AWS that differ in parameters such 
 
 ## Getting started - creating an S3 bucket for my FASTQ inputs
 
-First thing was to log in AWS and create a new S3 bucket (sort of equivalent to an “uber”-directory name) called “tdr-staph-fastqs”. This bucket was set up as private, meaning only myself and people I authorize can access.  Then I uploaded some FASTQ files using the [AWS CLI](https://aws.amazon.com/cli/) (command line interface), but there are many other ways to interface with S3.  My dataset was 5 randomly chosen paired end Illumina runs of _S. aureus_ from this paper<sup><a href="https://doi.org/10.1186/s12866-018-1336-z">2</a></sup>. The total size was 1.8 Gbytes.  As AWS charges me $0.023 per GByte per month, I could afford to keep it there while I played around with EC2 compute strategies.
+First thing was to log in AWS and create a new S3 bucket (sort of equivalent to an “uber”-directory name) called “tdr-staph-fastqs”. This bucket was set up as private, meaning only myself and people I authorize can access.  Then I uploaded some FASTQ files using the [AWS CLI](https://aws.amazon.com/cli/) (Command Line Interface), but there are many other ways to interface with S3.  My dataset was 5 randomly chosen paired end Illumina runs of _S. aureus_ from [this paper](https://doi.org/10.1186/s12866-018-1336-z). The total size was 1.8 Gbytes.  As AWS charges me $0.023 per GByte per month, I could afford to keep it there while I played around with EC2 compute strategies.
 
 ![S3 set up](/images/aws-bactopia-image1.png)
 
@@ -47,7 +45,7 @@ $ rm Miniconda3-latest-Linux-x86_64.sh
 $ conda install mamba -n base -c conda-forge
 
 $ sudo yum install -y bzip2 wget git emacs
-mamba create -n utils -y -c conda-forge -c bioconda procps-ng sed tar wget which coreutils pigz
+$ mamba create -n utils -y -c conda-forge -c bioconda procps-ng sed tar wget which coreutils pigz
 ```
 
 
@@ -61,9 +59,7 @@ $ bactopia --version
 bactopia 1.7.0
 ```
 
-
-Then I took the steps to make the species-specific Bactopia datasets, incorporating the curated _S. aureus _github repo.
-
+Then I took the steps to make the species-specific Bactopia datasets, incorporating the curated _S. aureus_ github repo.
 
 ```
 $ mkdir datasets
@@ -73,9 +69,7 @@ $ rm -rf ../bactopia-datasets/ # clean up
 $ bactopia datasets --ariba "card" --species "Staphylococcus aureus" --cpus 4 # takes a few min
 ```
 
-
 Next I copied the FASTQ data from S3 and made a file of file names (FOFN), using the _bactopia prepare_ sub-command (as detailed in the [bactopia tutorial)](https://bactopia.github.io/usage-basic/#the-fofn-format).
-
 
 ```
 $ aws s3 cp s3://tdr-staph-fastqs fastqs/ --recursive
@@ -94,17 +88,13 @@ David-1_CGTACTAG-GCGTAAGA_L001	paired-end	/home/ec2-user/fastqs/David-1_CGTACTAG
 TACTAG-GCGTAAGA_L001_R2.fastq.gz	
 ```
 
-
 Finally, I set up access to [Nextflow Tower](https://tower.nf/) so that I could monitor the workflow in real time.  You need to create an account and [create a secret token](https://www.nextflow.io/blog/2021/nextflow-developer-environment.html).
-
 
 ```
 $ export TOWER_ACCESS_TOKEN=<secret_token>
 ```
 
-
 All the steps above took less than an hour. Now, to launch the analysis of all 5 genomes I used the command below. 
-
 
 ```
 $ bactopia --fastqs fastqs.txt \
@@ -126,22 +116,19 @@ The script generates a URL to Nextflow Tower, so you can watch it all happening 
 
 ![Tower Stats](/images/aws-bactopia-image2.png)
 
-Nextflow produces a lot of nice statistics that the Tower visualizes and it is clear to see that the _blast_proteins_ is a bit of a culprit in slowing down the run. This is because of the large number of proteins in the custom S. aureus database used here. In later versions of the software, we may make some tweaks to this process so that it doesn’t slow down the rest of the pipeline too  much.
+Nextflow produces a lot of nice statistics that the Tower visualizes and it is clear to see that the _blast_proteins_ is a bit of a culprit in slowing down the run. This is because of the large number of proteins in the custom _S. aureus_ database used here. In later versions of the software, we may make some tweaks to this process so that it doesn’t slow down the rest of the pipeline too  much.
 
 ![Process Stats](/images/aws-bactopia-image3.png)
 
 So all the data is now in the output directory, which can be moved to S3, or downloaded directly from EBS using scp or rsync.  These directories can be mined for assemblies, blast results etc. I I also used these to run a couple of [bactopia-tools](https://bactopia.github.io/bactopia-tools/) to further summarize and query the data.
 
-The most basic tool is summary.
-
+The most basic tool is summary:
 
 ```
 $ bactopia tools summary --bactopia out_bactopia
 ```
 
-
 This creates a `bactopia-tools `folder with summaries of data quality, MLST and antimicrobial resistance hits for each strain. For example,
-
 
 ```
 $ more bactopia-tools/summary/bactopia/amrfinder/amrfinder-gene-summary.txt
@@ -152,17 +139,13 @@ David-13_AGGCAGAA-GTAAGGAG_L001	True	True	True	True	True	False
 David-1_CGTACTAG-GCGTAAGA_L001	True	True	True	True	True	True
 ```
 
-
-Another tool is `staph-typer` a set of (currently) three typing tools specific for S. aureus.  
-
+Another tool is `staph-typer` a set of (currently) three typing tools specific for _S. aureus_.  
 
 ```
 $ bactopia tools staph-typer --bactopia out_bactopia
 ```
 
-
 The results from this run are put in the `bactopia-tools` folder under a subfolder for the name of the tool. For example, AgrVATE results show all strains are group 1 _agr_ and probably don’t have frameshifts.
-
 
 ```
 $ more bactopia-tools/staph-typer/staph-typer/agrvate-results.txt 
@@ -174,17 +157,7 @@ David-13_AGGCAGAA-GTAAGGAG_L001	gp1	8	1	s	u
 David-1_CGTACTAG-GCGTAAGA_L001	gp1	13	1	s	0
 ```
 
-
 After that is done, the instance can be closed , or if there is no immediate need to run more bactopia analysis, terminated.
 
 (Note - I was charged $1.56 for the 2.5 hour session described here)
-
-
-## References
-
-
-1.	[Petit RA, Read TD. Bactopia: a Flexible Pipeline for Complete Analysis of Bacterial Genomes. mSystems 2020;5.: https://doi.org/10.1128/mSystems.00190-20.](https://doi.org/10.1128/mSystems.00190-20)
-
-
-2.	[Read TD, Petit RA 3rd, Yin Z, Montgomery T, McNulty MC, David MZ. USA300 Staphylococcus aureus persists on multiple body sites following an infection. BMC Microbiol 2018;18:206. https://doi.org/10.1186/s12866-018-1336-z.](https://doi.org/10.1186/s12866-018-1336-z)
 
