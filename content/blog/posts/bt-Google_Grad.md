@@ -1,6 +1,6 @@
 ---
 title: "OK Google, How do I Learn Data Science?"
-description: "An R how-to guide to finding your how-ho guides in Google Search history"
+description: "An R how-to guide to finding your how-to guides in Google Search history"
 author: ["Brooke Talbot"]
 date: "2021-08-16"
 featured_image: "/images/bt-Image_5.jpg"
@@ -11,7 +11,7 @@ Something that delights me as a data scientist is that concepts and techniques a
 
 ## Looking at my Google Search history over time
 
-I decided to take on this task of exploring just exactly how I learned from the internet in the past few years. With some significant help and inspiration [from this delightful how-to guide](https://towardsdatascience.com/explore-your-activity-on-google-with-r-how-to-analyze-and-visualize-your-search-history-1fb74e5fb2b6) by Saúl Buentello, I extracted the Google Search history from my personal Google account and brought that data into RStudio.  
+I decided to take on this task of exploring just exactly how I learned from the internet in the past few years. With some significant help and inspiration [from this delightful how-to guide](https://towardsdatascience.com/explore-your-activity-on-google-with-r-how-to-analyze-and-visualize-your-search-history-1fb74e5fb2b6) by Sa&uacute;l Buentello, I extracted the Google Search history from my personal Google account and brought that data into RStudio.  
 
 Using Buentello's excellent web scraping code and then taking a couple of trips around the [Tidyverse](https://www.tidyverse.org/) - voila! -  I was able to filter down and count just how often I have used Google Search since I created the account back in 2009.   
 
