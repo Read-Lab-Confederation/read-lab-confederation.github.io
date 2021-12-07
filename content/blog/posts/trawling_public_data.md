@@ -1,5 +1,5 @@
 ---
-title: The joys and perils of trawling through public genome data
+title: "The joys and perils of trawling through public genome data"
 description: ""
 author: ["Tim Read"]
 date: "2021-12-07”
