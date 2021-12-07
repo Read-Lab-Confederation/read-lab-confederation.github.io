@@ -1,9 +1,9 @@
 ---
-title: "The joys and perils of trawling through public genome data"
+title: An introduction 
 description: ""
 author: ["Tim Read"]
-date: "2021-12-07”
-featured_image: "/images/animation.gif”
+date: "2021-12-07"
+featured_image: "/images/aws-bactopia-image3.png"
 draft: false
 ---
 
