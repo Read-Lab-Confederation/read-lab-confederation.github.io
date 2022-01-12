@@ -4,13 +4,14 @@
   "last_name": "Talbot",
   "midde_initial": "",
   "position": "PBEE Graduate Student",
+  "profile_picture": "/images/group/BrookeT.jpg",
   "weight": 2,
   "social": {
-    "github": "",
+    "github": "bmtalbot",
     "google_scholar": "",
     "ncbi_bibliography": "",
-    "orcid": "",
-    "twitter": "",
-    "website": ""
+    "orcid": "0000-0001-5246-7209",
+    "twitter": "BeeTalbs",
+    "website": "https://bmtalbot.github.io/"
   }
 }
