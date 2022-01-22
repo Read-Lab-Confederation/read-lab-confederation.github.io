@@ -11,17 +11,17 @@ draft: false
 
 ###### (tl;dr at bottom)
 
-In [a recent publication](https://journals.asm.org/doi/10.1128/spectrum.01334-21)<sup>1</sup>, we analysed the quorum sensing operon of > 40,000 _Staphylococcus aureus_ genomes to identify recurring patterns of genetic variation. To infer transmission of specific mutations, we were tasked with constructing phylogenies for multiple clonal lineages, each comprising thousands of isolates<sup>1</sup>. 
+In [a recent publication](https://journals.asm.org/doi/10.1128/spectrum.01334-21)(1), we analysed the quorum sensing operon of > 40,000 _Staphylococcus aureus_ genomes to identify recurring patterns of genetic variation. To infer transmission of specific mutations, we were tasked with constructing phylogenies for multiple clonal lineages, each comprising thousands of isolates(1). 
 
 Whole genome maximum likelihood phylogeny construction is a both time and computation-intensive process, especially for large numbers of tips. Moreover, as we were working with publicly available sequences, there is a lot of redundancy in the uploaded data. Presence of too many near-identical isolates would confound our phylogenetic trees -_too much data?_
 
 **So, how does one rationally reduce a large dataset while retaining as much of the diversity as possible?** Especially when there’s a sampling bias leading to certain genotypes being sampled (or occurring naturally) more frequently than others? (In our case, for every mutant genotype, there were ~25 isolates with the WT genotype) 
 
-With the rapid growth of genome sequencing data, this is not an uncommon or even a new problem<sup>2,3</sup>. There are several existing strategies for dereplicating genomes to reduce sample size - MASH, ANI, PopPunk. However, what methods are sensitive enough to actually distinguish between “identical” and “near-identical” genomes? 
+With the rapid growth of genome sequencing data, this is not an uncommon or even a new problem(2,3). There are several existing strategies for dereplicating genomes to reduce sample size - MASH, ANI, PopPunk. However, what methods are sensitive enough to actually distinguish between “identical” and “near-identical” genomes? 
 
 The “ideal” method would be to perform whole genome alignments and calculate SNP counts. As this would give us a pretty accurate picture of the exact number of nucleotide differences between two genomes. The disadvantage here is that this method does not scale well. Alignments become much slower when more samples are added. Therefore, we need fast methods to estimate the approximate pairwise distances between multiple genomes while also maintaining a reasonable level of accuracy. 
 
-How does a  distance “approximation” method compare against a more robust metric like SNP distance? To answer this question, I used 380 strains from the Staphopia NRD set, a curated dataset of high quality _S. aureus_ whole genomes comprising several Sequence Types and Clonal Complexes<sup>4</sup>. 
+How does a  distance “approximation” method compare against a more robust metric like SNP distance? To answer this question, I used 380 strains from the Staphopia NRD set, a curated dataset of high quality _S. aureus_ whole genomes comprising several Sequence Types and Clonal Complexes(4). 
 
 I performed core genome alignments with [parsnp ](https://github.com/marbl/parsnp)and calculated pairwise SNP distances using [snp-dists](https://github.com/tseemann/snp-dists). The size of the core genome for 380 diverse _S. aureus_ strains is 1.56Mbp, while the average _S. aureus_ genome size is 2.8Mbp. I also calculated pairwise MASH distances using mash dist. [MASH ](https://github.com/marbl/Mash)is a fast, accurate and relatively computationally inexpensive method to estimate the distance between two genomes. Tools like [PopPunk](https://poppunk.readthedocs.io/en/latest/index.html) and [Assembly Dereplicator](https://github.com/rrwick/Assembly-Dereplicator) use(d) MASH to estimate genomic distances (PopPunk now uses [pp-sketchlib](https://github.com/johnlees/pp-sketchlib)). Then, I plotted the mash distance estimates for each alignment pair against the SNP distance. 
  
@@ -39,13 +39,13 @@ The median SNP distances (red vertical line) for a MASH distance threshold &lt; 
 
 How do you pick a MASH distance-based clustering threshold for comparing such closely related genomes? 
 
-This is subjective, as it depends on the research question. In our case, we were aware that our mutant genotypes would undergo few transmission events, and our main interest was in estimating the long-term transmission capabilities. Therefore, we settled on a threshold of 0.0005 (~47 SNPs). For _S. aureus_, this translates to an approximate of 1 - 2 transmission events<sup>5</sup>. This means, our clustering threshold would collapse genomes that were ~2 transmission events apart. 
+This is subjective, as it depends on the research question. In our case, we were aware that our mutant genotypes would undergo few transmission events, and our main interest was in estimating the long-term transmission capabilities. Therefore, we settled on a threshold of 0.0005 (~47 SNPs). For _S. aureus_, this translates to an approximate of 1 - 2 transmission events(5). This means, our clustering threshold would collapse genomes that were ~2 transmission events apart. 
 
 No matter what MASH threshold is picked, the clustering is going to be less than ideal. Looking back at Fig 2, even with our strict threshold of 0.0005, the possibility of not collapsing genomes less than 50 SNPs apart still remains, as some pairs can have a mash distance of up to 0.004. This still leaves some redundancy in our final dataset. However, I do believe it is safer to err on the conservative side. Picking a lower threshold would only leave some redundancy whereas picking a higher threshold could collapse more unrelated genomes. In our case, this would lead to missing some intermediate - long-term transmission events. 
 
 ### Conclusions
 
-In conclusion - whichever dereplication method and cutoff is used, we need to know what that cutoff means in terms of the number of SNPs and the biological significance of that SNP distance. It is also important to note that not all dereplication tools are the same, even with the same cutoff<sup>6</sup>. 
+In conclusion - whichever dereplication method and cutoff is used, we need to know what that cutoff means in terms of the number of SNPs and the biological significance of that SNP distance. It is also important to note that not all dereplication tools are the same, even with the same cutoff(6). 
 
 #### **TL;DR:** **How does one rationally reduce a large dataset while retaining as much of the diversity as possible?**
 
