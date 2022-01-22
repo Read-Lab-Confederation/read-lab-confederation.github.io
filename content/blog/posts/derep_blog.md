@@ -11,7 +11,7 @@ draft: false
 
 ###### (tl;dr at bottom)
 
-In a recent publication, we analysed the quorum sensing operon of > 40,000 _Staphylococcus aureus_ genomes to identify recurring patterns of genetic variation. To infer transmission of specific mutations, we were tasked with constructing phylogenies for multiple clonal lineages, each comprising thousands of isolates<sup>1</sup>. 
+In [a recent publication](https://journals.asm.org/doi/10.1128/spectrum.01334-21)<sup>1</sup>, we analysed the quorum sensing operon of > 40,000 _Staphylococcus aureus_ genomes to identify recurring patterns of genetic variation. To infer transmission of specific mutations, we were tasked with constructing phylogenies for multiple clonal lineages, each comprising thousands of isolates<sup>1</sup>. 
 
 Whole genome maximum likelihood phylogeny construction is a both time and computation-intensive process, especially for large numbers of tips. Moreover, as we were working with publicly available sequences, there is a lot of redundancy in the uploaded data. Presence of too many near-identical isolates would confound our phylogenetic trees -_ too much data?_
 
@@ -21,9 +21,9 @@ With the rapid growth of genome sequencing data, this is not an uncommon or even
 
 The “ideal” method would be to perform whole genome alignments and calculate SNP counts. As this would give us a pretty accurate picture of the exact number of nucleotide differences between two genomes. The disadvantage here is that this method does not scale well. Alignments become much slower when more samples are added. Therefore, we need fast methods to estimate the approximate pairwise distances between multiple genomes while also maintaining a reasonable level of accuracy. 
 
-How does a  distance “approximation” method compare against a more robust metric like SNP distance? To answer this question, I used 380 strains from the Staphopia NRD set, a curated dataset of high quality _S. aureus _whole genomes comprising several Sequence Types and Clonal Complexes<sup>4</sup>. 
+How does a  distance “approximation” method compare against a more robust metric like SNP distance? To answer this question, I used 380 strains from the Staphopia NRD set, a curated dataset of high quality _S. aureus_ whole genomes comprising several Sequence Types and Clonal Complexes<sup>4</sup>. 
 
-I performed core genome alignments with [parsnp ](https://github.com/marbl/parsnp)and calculated pairwise SNP distances using [snp-dists](https://github.com/tseemann/snp-dists). The size of the core genome for 380 diverse _S. aureus_ strains is 1.56Mbp, while the average _S. aureus _genome size is 2.8Mbp. I also calculated pairwise MASH distances using mash dist. [MASH ](https://github.com/marbl/Mash)is a fast, accurate and relatively computationally inexpensive method to estimate the distance between two genomes. Tools like [PopPunk](https://poppunk.readthedocs.io/en/latest/index.html) and [Assembly Dereplicator](https://github.com/rrwick/Assembly-Dereplicator) use(d) MASH to estimate genomic distances (PopPunk now uses [pp-sketchlib](https://github.com/johnlees/pp-sketchlib)). Then, I plotted the mash distance estimates for each alignment pair against the SNP distance. 
+I performed core genome alignments with [parsnp ](https://github.com/marbl/parsnp)and calculated pairwise SNP distances using [snp-dists](https://github.com/tseemann/snp-dists). The size of the core genome for 380 diverse _S. aureus_ strains is 1.56Mbp, while the average _S. aureus_ genome size is 2.8Mbp. I also calculated pairwise MASH distances using mash dist. [MASH ](https://github.com/marbl/Mash)is a fast, accurate and relatively computationally inexpensive method to estimate the distance between two genomes. Tools like [PopPunk](https://poppunk.readthedocs.io/en/latest/index.html) and [Assembly Dereplicator](https://github.com/rrwick/Assembly-Dereplicator) use(d) MASH to estimate genomic distances (PopPunk now uses [pp-sketchlib](https://github.com/johnlees/pp-sketchlib)). Then, I plotted the mash distance estimates for each alignment pair against the SNP distance. 
  
 ![Fig1](/images/Vishnu_Fig1.png "Fig1")
 
