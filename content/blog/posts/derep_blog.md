@@ -3,12 +3,10 @@ title: Help, I have too many genome sequences!
 description: ""
 author: ["Vishnu Raghuram"]
 date: "2022-01-21"
-featured_image: "/images/Vishnu_Fig1.png"
+featured_image: "/images/Vishnu_Fig2.png"
 draft: false
 ---
-
-
-Help, I have too many genome sequences! 
+ 
 #### Said no one, ever. Right? 
 
 ###### (tl;dr at bottom)
@@ -27,15 +25,15 @@ How does a  distance “approximation” method compare against a more robust me
 
 I performed core genome alignments with [parsnp ](https://github.com/marbl/parsnp)and calculated pairwise SNP distances using [snp-dists](https://github.com/tseemann/snp-dists). The size of the core genome for 380 diverse _S. aureus_ strains is 1.56Mbp, while the average _S. aureus _genome size is 2.8Mbp. I also calculated pairwise MASH distances using mash dist. [MASH ](https://github.com/marbl/Mash)is a fast, accurate and relatively computationally inexpensive method to estimate the distance between two genomes. Tools like [PopPunk](https://poppunk.readthedocs.io/en/latest/index.html) and [Assembly Dereplicator](https://github.com/rrwick/Assembly-Dereplicator) use(d) MASH to estimate genomic distances (PopPunk now uses [pp-sketchlib](https://github.com/johnlees/pp-sketchlib)). Then, I plotted the mash distance estimates for each alignment pair against the SNP distance. 
  
-![Fig1](Vishnu_Fig1.png "Fig1")
+![Fig1](/images/Vishnu_Fig1.png "Fig1")
 
 Overall, MASH Distance has great concordance with the SNP distance. But how well does mash perform for low SNP distances? Our goal was to ascertain possible transmission of specific mutant genotypes across generations, therefore we were interested in distinguishing closely related genomes. So, let’s zoom in to look at &lt; 50 SNPs
 
-![Fig2](Vishnu_Fig2.png "Fig2")
+![Fig2](/images/Vishnu_Fig2.png "Fig2")
 
 The Red vertical line is the 50 SNP mark, the black horizontal line marks a MASH distance of 0.0005. Genomes &lt; 50 SNPs apart could have a MASH distance anywhere between 0 to 0.004 . Moreover, genomes 0 - 500 SNPs apart can all have a MASH dist between 0 - 0.005. 
 
-![Fig3](Vishnu_Fig3.png "Fig3")
+![Fig3](/images/Vishnu_Fig3.png "Fig3")
 
 The median SNP distances (red vertical line) for a MASH distance threshold &lt; 0.0005 and 0.001 are 47 and 56 respectively. For a MASH distance threshold of &lt; 0.05, the median SNP distance is 208. 
 
