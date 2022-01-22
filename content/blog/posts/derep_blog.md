@@ -13,7 +13,7 @@ draft: false
 
 In [a recent publication](https://journals.asm.org/doi/10.1128/spectrum.01334-21)<sup>1</sup>, we analysed the quorum sensing operon of > 40,000 _Staphylococcus aureus_ genomes to identify recurring patterns of genetic variation. To infer transmission of specific mutations, we were tasked with constructing phylogenies for multiple clonal lineages, each comprising thousands of isolates<sup>1</sup>. 
 
-Whole genome maximum likelihood phylogeny construction is a both time and computation-intensive process, especially for large numbers of tips. Moreover, as we were working with publicly available sequences, there is a lot of redundancy in the uploaded data. Presence of too many near-identical isolates would confound our phylogenetic trees -_ too much data?_
+Whole genome maximum likelihood phylogeny construction is a both time and computation-intensive process, especially for large numbers of tips. Moreover, as we were working with publicly available sequences, there is a lot of redundancy in the uploaded data. Presence of too many near-identical isolates would confound our phylogenetic trees -_too much data?_
 
 **So, how does one rationally reduce a large dataset while retaining as much of the diversity as possible?** Especially when there’s a sampling bias leading to certain genotypes being sampled (or occurring naturally) more frequently than others? (In our case, for every mutant genotype, there were ~25 isolates with the WT genotype) 
 
@@ -53,11 +53,11 @@ The following workflow worked well for us:
 
 
 1. From your initial large dataset, identify a small subset (~ 200 - 300 genomes) that captures the spectrum of genetic diversity. 
-    1. In our case, we used Staphopia’s NRD set which comprises many _S. aureus _sequence types.  
+    * In our case, we used Staphopia’s NRD set which comprises many _S. aureus_ sequence types.  
 2. Using this small but diverse dataset, perform whole genome alignments and calculate pairwise SNP distances. Also perform pairwise distance  estimations using your genomic distance approximation method of choice (eg: MASH, ANI).
-    2. We used parsnp and MASH respectively. The SNP distances may also vary based on the genome alignment method used.
+    * We used parsnp and MASH respectively. The SNP distances may also vary based on the genome alignment method used.
 3. Based on your biological question, select a distance approximation cutoff based on its concordance with the number of SNPs [Fig 1]
-    3. We used a MASH distance cutoff of 0.0005 (~47 SNPs or 1 - 2 transmission events)
+    * We used a MASH distance cutoff of 0.0005 (~47 SNPs or 1 - 2 transmission events)
 4. Repeat your pairwise distance estimation method but now with ALL your data and cluster based on your chosen threshold.
 
 **References**
