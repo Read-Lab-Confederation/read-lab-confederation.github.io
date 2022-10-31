@@ -123,7 +123,7 @@ The Mu50 strain was isolated in 1997 from the pus of a surgical site infection o
 
 Common reference strains cited in literature both for laboratory usage and for genomic sequencing only fall into a few of these lineages, particularly Clonal complexes (CC) 5 and 8. 
 
-![Fig2](/images/blog202210_Image2.jpg "Fig2”)
+![Fig2](/images/blog202210_Image2.jpg "Fig2")
 
 However, PubMLST([Jolley 2014](https://pubmed.ncbi.nlm.nih.gov/30345391/)) documents the [10 most common globally distributed and unambiguously assigned CCs](https://pubmlst.org/organisms/staphylococcus-aureus/clonal-complexes), which includes: CC1, 5, 8, 15, 22, 30, 45, 97, 93, 121. The divide between different *S. aureus* clonal lineages is interesting as there are distinct genomic differences between CC, including lineage-associated mobile genetic elements (eg. SCCmec) and virulence factors (eg. PVL), leading to unique resistance and virulence phenotypes. There are also unique ecological patterns among different backgrounds of MRSA, including healthcare associations and livestock associations. 
 
