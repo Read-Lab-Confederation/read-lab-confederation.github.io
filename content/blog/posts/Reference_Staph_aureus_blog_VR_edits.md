@@ -14,7 +14,7 @@ One particular organism with a long laboratory history is *Staphylococcus aureus
 
 Well established strains of *S. aureus* which have been cataloged, propagated, and utilized go as far back as the 1950s, prior even to the discovery of the structure of DNA. Strains Newman, NCTC8352, and N315 were being used as laboratory models to better understand the biology of *S. aureus* for decades, all while a better understanding of nucleic acid sequencing was itself evolving. The emergence of “next generation” shotgun short read sequencing ushered in an important era for more complex and complete genomic analyses ([Heather and Chain 2016](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4727787/)), bringing new context and exploratory studies of the genetic basis for pathogen emergence. 
 
-![Fig1](/images/aws-bactopia-image1.png "Fig1")
+![Fig1](/images/blog202210_Image1.jpg "Fig1")
 
 We identified seven *S. aureus* strains that are commonly used in laboratory work exploring *S. aureus* biology, particularly for cloning experiments and experimental evolution, and also occasionally as the source of reference sequences. If you are in the world of *S. aureus*, you have likely heard these names, but did you know all of their biography? If you're new to this space, or looking for more context for your genomic work on *S. aureus*, then allow us to introduce you to some of the key microbial players in field. We have noted these strains biological source, year of isolation, year of complete sequencing, and also tried to understand why they’re named what they’re named, if possible. We also provided a quick highlight about the unique utility of these strains for research questions.
 
@@ -123,7 +123,7 @@ The Mu50 strain was isolated in 1997 from the pus of a surgical site infection o
 
 Common reference strains cited in literature both for laboratory usage and for genomic sequencing only fall into a few of these lineages, particularly Clonal complexes (CC) 5 and 8. 
 
-![Fig2](/images/aws-bactopia-image2.png "Fig2”)
+![Fig2](/images/blog202210_Image2.jpg "Fig2”)
 
 However, PubMLST([Jolley 2014](https://pubmed.ncbi.nlm.nih.gov/30345391/)) documents the [10 most common globally distributed and unambiguously assigned CCs](https://pubmlst.org/organisms/staphylococcus-aureus/clonal-complexes), which includes: CC1, 5, 8, 15, 22, 30, 45, 97, 93, 121. The divide between different *S. aureus* clonal lineages is interesting as there are distinct genomic differences between CC, including lineage-associated mobile genetic elements (eg. SCCmec) and virulence factors (eg. PVL), leading to unique resistance and virulence phenotypes. There are also unique ecological patterns among different backgrounds of MRSA, including healthcare associations and livestock associations. 
 
