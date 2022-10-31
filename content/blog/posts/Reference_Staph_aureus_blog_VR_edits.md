@@ -1,7 +1,7 @@
 ---
-title: Meet the Staph: A menagerie of common *S. aureus* Reference Strains 
+title: "Meet the Staph: A menagerie of common *S. aureus* Reference Strains" 
 description: ""
-author: ["Brooke Talbot"] and ["Vishnu Raghuram"]
+author: ["Brooke Talbot","Vishnu Raghuram"]
 date: "2022-10-31"
 featured_image: "/images/blog202210_Image1.jpg"
 draft: false
