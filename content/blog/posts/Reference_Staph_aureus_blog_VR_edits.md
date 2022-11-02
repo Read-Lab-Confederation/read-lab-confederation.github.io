@@ -7,6 +7,8 @@ featured_image: "/images/blog202210_Image1.jpg"
 draft: false
 ---
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7274724.svg)](https://doi.org/10.5281/zenodo.7274724)
+
 When we want to answer a specific phenotype question about bacteria, we are often left to ask which strain is the best choice? It’s important to have a variety of strain backgrounds for your laboratory experiments because different genetic backgrounds will help to answer different questions. This extends to all manner of living laboratory organisms from *C. elegans* to larger vertebrates. In the context of human health research, these higher order model organisms have been bred and manipulated to optimize their specific relevance to modeling a human health concern. Similarly, bacteria can also be modified to adapt to a specific laboratory environment to answer important questions. In contrast, these pathogenic bacterial strains already have important clinical, ecological, and epidemiological contexts which may have contributed to their unique phenotypes and their genetic profiles.
 
 ## *Staphylococcus aureus* on parade
