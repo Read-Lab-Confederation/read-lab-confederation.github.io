@@ -6,6 +6,7 @@ date: "2021-08-16"
 featured_image: "/images/bt-Image_5.jpg"
 draft: false
 ---
+<a href="https://doi.org/10.5281/zenodo.7278437"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.7278437.svg" alt="DOI" width="160" height="25"></a>
 
 Something that delights me as a data scientist is that concepts and techniques are very readily shared within the community. It's also astounding to me that each and every day we have access to an infinite body of knowledge which can help supplement formal and informal learning - namely, that we can gain a lot of information very quickly by turning to Professor Google! Investigating how we as scientists search this seemingly endless collection of facts and figures and code blocks, and for what exact purposes, can give some great insights into how we communicate and learn and ultimately improve our reseach.   
 
