@@ -6,6 +6,8 @@ date: "2022-01-21"
 featured_image: "/images/Vishnu_Fig2.png"
 draft: false
 ---
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7278310.svg)](https://doi.org/10.5281/zenodo.7278310)
  
 #### Said no one, ever. Right? 
 
