@@ -1,7 +1,7 @@
 ---
 title: "How I freed NCBI antibiogram data from XML" 
 description: ""
-author: “Tim Read”
+author: [“Tim Read”]
 date: "2023-05-18”
 featured_image: "/images/Fig1-202302.png"
 draft: false
@@ -33,7 +33,6 @@ NCBI has been [collecting antibiograms ](https://www.ncbi.nlm.nih.gov/biosample/
 ![Fig1](/images/Fig1-202302.png)
 
 The data is already extensive: - 25,046 BioSample accessions.  Looking through typical records, most had a table with 10 columns.
-
 
 ![Fig2](/images/Fig2-202302.png)
 
