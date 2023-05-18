@@ -9,11 +9,8 @@ draft: false
 
 # How I freed NCBI antibiogram data from XML
 
-Tim Read, May 2023
-
 
 ## TL;DR
-
 
 
 * How I made a tidy data frame of >24,000 bacterial BioSample IDs with antibiograms and linked genomic sequence data using a customized R script.
