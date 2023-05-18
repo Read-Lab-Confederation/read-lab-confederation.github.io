@@ -1,5 +1,5 @@
 ---
-title: "How I freed NCBI antibiogram data from XML" 
+title: "How I freed NCBI antibiogram data from XML"
 description: ""
 author: [“Tim Read”]
 date: "2023-05-18”
