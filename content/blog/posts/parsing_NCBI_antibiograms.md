@@ -1,7 +1,7 @@
 ---
 title: "How I freed NCBI antibiogram data from XML" 
 description: ""
-author: ["Brooke Talbot","Vishnu Raghuram"]
+author: ["Tim Read"]
 date: "2023-05-18"
 featured_image: "/images/blog202210_Image1.jpg"
 draft: false
