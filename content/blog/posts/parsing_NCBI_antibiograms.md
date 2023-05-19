@@ -1,9 +1,9 @@
 ---
-title: "How I freed NCBI antibiogram data from XML" 
+title: "Meet the Staph: A menagerie of common *S. aureus* reference strains" 
 description: ""
-author: [“Tim Read”]
-date: "2023-05-18”
-featured_image: "/images/Fig1-202302.png"
+author: ["Brooke Talbot","Vishnu Raghuram"]
+date: "2023-05-18"
+featured_image: "/images/blog202210_Image1.jpg"
 draft: false
 ---
 
