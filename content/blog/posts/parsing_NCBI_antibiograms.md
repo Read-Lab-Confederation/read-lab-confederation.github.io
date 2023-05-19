@@ -3,7 +3,7 @@ title: "How I freed NCBI antibiogram data from XML"
 description: ""
 author: ["Tim Read"]
 date: "2023-05-18"
-featured_image: "/images/blog202210_Image1.jpg"
+featured_image: "/images/Fig1-202302.png"
 draft: false
 ---
 
@@ -32,15 +32,15 @@ NCBI has been [collecting antibiograms ](https://www.ncbi.nlm.nih.gov/biosample/
 
 The data is already extensive: - 25,046 BioSample accessions.  Looking through typical records, most had a table with 10 columns.
 
-![Fig2](/images/Fig2-202302.png)
+![Fig2](/images/Fig2-202303.png)
 
 But a few (exclusively Mycobacterium tuberculosis, I think) had antibiogram tables with 6 columns.
 
-![Fig3](/images/Fig3-202302.png)
+![Fig3](/images/Fig3-202303.png)
 
 When I tried to download these data I made the unpleasant finding that the standard text file (itself in a freakishly difficult format for parsing) didn’t contain the antibiotic tables.  In order to use the information I would have to work with the XML-formatted output file.
 
-![Fig4](/images/Fig4-202302.png) 
+![Fig4](/images/Fig4-202303.png) 
 
 ## XML: Oh no!
 
