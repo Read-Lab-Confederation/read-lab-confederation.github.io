@@ -1,5 +1,5 @@
 ---
-title: "Meet the Staph: A menagerie of common *S. aureus* reference strains" 
+title: "How I freed NCBI antibiogram data from XML" 
 description: ""
 author: ["Brooke Talbot","Vishnu Raghuram"]
 date: "2023-05-18"
