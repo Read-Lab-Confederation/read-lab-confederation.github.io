@@ -7,6 +7,7 @@ type: "group"
 ### EMERGENT Group
 We are based in the School of Medicine, Division of Infectious Diseases at  Emory University in Atlanta, Georgia.
 
+{{< group "group_picture" "/images/Group-2013-12-14.”jpg “December 2023 L-R: Katrina, Brooke, Ana, Jacoby, Megan, Parul, Tim, Kim, Alex” >}}
 
 ### Current Members
 
