@@ -4,13 +4,15 @@
   "last_name": "Sharma",
   "midde_initial": "",
   "position": "Bioinformatics Scientist",
+  "profile_picture": "/images/group/parul-sharma.png",
   "weight": 1,
   "social": {
     "github": "",
-    "google_scholar": "",
+    "google_scholar": "https://scholar.google.co.in/citations?user=_dzInqYAAAAJ&hl=en",
     "ncbi_bibliography": "",
-    "orcid": "",
-    "twitter": "",
-    "website": ""
+    "orcid": "0000-0002-3065-4377",
+    "twitter": "@parul142",
+    "website": "",
+    "linkedin": "https://www.linkedin.com/in/parul-sharma-77152672/"
   }
 }
