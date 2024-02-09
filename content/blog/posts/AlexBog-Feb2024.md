@@ -10,7 +10,7 @@ draft: false
 
 ## Introduction: A Texan’s First Summer in Atlanta
 
-This summer and over the past year, I have had the opportunity to work in the Read lab as an undergraduate researcher. I am a recent graduate of the Emory College of Arts and Sciences where I received a B.S. in Biology and Philosophy. I came to Emory with the hope of participating in undergraduate research, and at the beginning of my junior year I had that hope realized. Under the mentorship of graduate student Brooke Talbot and Dr. Timothy Read, I joined an ongoing study into the lineage-dependent metabolic capacities of methicillin-resistant _Staphylococcus aureus_ (MRSA). Through this project, I learned wet lab skills including bacterial growth and enzyme experimental techniques, as well as dry lab skills such as aligning bacterial genetic sequences, generating a phylogenetic tree, and performing data analysis using the programming language R (v4.0.4; R Core Team 2021). Through Emory’s Summer Undergraduate Research Experience (SURE) program, I designed and executed my own project, following my own research questions and experimental design over an 8-week period. I built on the skills I had developed over the past year and challenged myself further. Again, the guidance and support of Brooke Talbot and all the members of the Read lab provided a firm foundation for me to be confident in my research and endeavor to answer questions about MRSA metabolism and virulence. This blog post aims to both present the findings from my summer of research and some follow-up work done in the fall, as well as illustrate my experiences as an undergraduate performing research in the Read lab.
+This past summer and over the past year, I have had the opportunity to work in the Read lab as an undergraduate researcher. I am a recent graduate of the Emory College of Arts and Sciences where I received a B.S. in Biology and Philosophy. I came to Emory with the hope of participating in undergraduate research, and at the beginning of my junior year I had that hope realized. Under the mentorship of graduate student Brooke Talbot and Dr. Timothy Read, I joined an ongoing study into the lineage-dependent metabolic capacities of methicillin-resistant _Staphylococcus aureus_ (MRSA). Through this project, I learned wet lab skills including bacterial growth and enzyme experimental techniques, as well as dry lab skills such as aligning bacterial genetic sequences, generating a phylogenetic tree, and performing data analysis using the programming language R (v4.0.4; R Core Team 2021). Through Emory’s Summer Undergraduate Research Experience (SURE) program, I designed and executed my own project, following my own research questions and experimental design over an 8-week period. I built on the skills I had developed over the past year and challenged myself further. Again, the guidance and support of Brooke Talbot and all the members of the Read lab provided a firm foundation for me to be confident in my research and endeavor to answer questions about MRSA metabolism and virulence. This blog post aims to both present the findings from my summer of research and some follow-up work done in the fall, as well as illustrate my experiences as an undergraduate performing research in the Read lab.
 
 MRSA is the leading pathogen isolated from bacterial infections among patients with type 2 diabetes, the most common metabolic illness that is ever increasing in prevalence (Lipsky et al. 1987). MRSA thrive in the nutrient-rich environment of a diabetic host plagued with insulin insensitivity and heightened or uncontrolled blood glucose levels, unable to mount a significant immune response (Thurlow et al. 2020).
 
@@ -26,7 +26,7 @@ At the time I joined the Read Lab, another ongoing project was examining clonal 
 
 ![Fig1](/images/AB_Figure_1_tree.PNG)
 
-*Fig1 legend?*
+**Figure 1:** Phylogeny of 105 _S. aureus_ strains from University of Pennsylvania hopsital cohort. Colored dots indicate lineage, Blue bars indicate diabetes status, and the red/yellow bars indicate type of acquisition.
 
 Sequence reads were assembled using shovill (v1.0.1). Sequences were then aligned to the reference genome of strain N315 (GCF_000009645.1) using parsnp (v1.2). Then, the alignment was used to build a maximum likelihood tree using a generalized time reversible model, sampling the alignments with 1000 bootstraps. This tree was then visualized in R using ggtree (v3.5.3) and plotted using ggplot2 (v3.3.6), with metadata visually assigned to it using gheatmap, a function of ggtree. The tree both provided a necessary context within which to evaluate my phenotypic results, as well as allow me to build up the basics of moving around my “dry lab,” using both the Linux command line and bringing its work into RStudio.
 
@@ -46,7 +46,7 @@ After incubation, the OD value of each 10-fold dilution was obtained, with reads
 
 ![Fig2](/images/AB_Figure_2_4_graphs.png)
 
-*Fig2 legend?*
+**Figure 2:** Each plot above shows growth curves for four different samples, each replicated six times. The dark blue line in each graph is the positive control lab strain JE2. a) A CC72 sample exhibiting normal growth conditions, growing exponentially for the first 4-6 hours then hitting carrying capacity and stagnating. b) A CC78 sample in a high glucose environment, starting its exponential growth at different time points over its 6 replicates. c) A CC5 sample which exhibited a "drop" morphology shared by the other CC5 strains in the low glucose test condition. The cause of this is unknown, and likely does not reflect actual population quantification. d) The same sample from b. in a low glucose environment, once again presenting uninterpretable results.
 
 In the figure, each graph represents six replicate growth curves of a single clinical strain in either the high glucose (a & b) or low glucose (c & d) conditions, as well as a lab stock strain of JE2, acting as the positive control (the dark blue line). A typical bacterial growth curve has little activity for the first few hours, then the population drastically increases in an exponential phase, then settles at a constant population in a stationary phase. We found this pattern in both glucose conditions, but also observed a variety of other morphologies. In 2b., it appears that each of the replicates entered their exponential phase at different time points. In 2c, this “drop” morphology was unique to strains from CC5 and only exhibited in the low glucose CDMG. And finally, some growth curves like 1d. were seemingly unintelligible, fluctuating wildly. These variations could be due to biofilm formation, which can inhibit the device’s ability to perform its light-dependent reads. The shaking of the incubator largely prevents this though, and any sedimentation observed in the wells was primarily just byproducts of the _S. aureus_ metabolism. The staggered-growth character of 2b. could also suggest that the population has adapted to a secondary carbon source such as acetate at different points, produced as a byproduct of catabolizing the glucose. This new-found hypothesis would serve as the impetus for the analysis of acetate production I would conduct in the fall.
 
@@ -54,7 +54,7 @@ Statistical analyses consisted of two-tailed t-tests comparing non-diabetic stra
 
 ![Fig3](/images/AB_Figure_3_rates.PNG)
 
-*Fig3 legend?*
+**Figure 3:** Growth rates calculated via the growthcurver package in RStudio. Graph on the left seperates the two conditions, and compares growth rates between lineages. Graphs on the right compare growth rates between host diabetes status in the low glucose (top) and high glucose (bottom) conditions.
 
 #### Approach 1.5: Evaluation of Acetate Levels
 
@@ -68,7 +68,7 @@ From this, we were able to determine the change in acetate concentration over ti
 
 ![Fig4](/images/AB_Figure_4_acetate.PNG)
 
-*Fig4 legend?*
+**Figure 4:** Change in acetate levels per hour for four experimental strains and JE2 as positive control. Left shows low glucose condition, right shows high glucose condition. In the low glucose environment, the negative rate represents usage and uptake of acetate, while in the high glucose environment this is not discernable.
 
 ### Approach 2: Virulence - SOD Quantification
 
@@ -77,7 +77,7 @@ We evaluated this via an enzymatic activity assay. The EnzyChrom Superoxide Dism
 
 ![Fig5](/images/AB_Figure_5_rxn.PNG)
 
-*Fig5 legend?*
+**Figure 5:** The above chemical interactions represent how the EnzyChrom Superoxide Dismutase Assay Kit functions. SOD reacts with the superoxide (O2-), and any remaining superoxide reacts with a dye to form color. Thus, from color intensity measured via spectrophotometry we may infer SOD concentration.
 
 Strains were first plated and then grown up overnight in TSB for 15 hours at 37 °C. Then, samples were resuspended in both CDMG conditions and cultured for another 3 hours. Cells were then vortexed and lysed to obtain cell supernatant for the assay. Supernatant was pipetted into a 96-well plate, and the reaction components were added to each well. A standard curve was also performed to orient the obtained results, using SOD enzyme. After initial OD readings were taken, the plate was stored in the dark and incubated at 25 °C for one hour before OD readings were taken again. Both reads were taken at 440nm, and the difference between the initial and final reads, once normalized to the negative control, served as a measure of SOD concentration.
 
@@ -87,6 +87,10 @@ With the deadline of the summer program quickly approaching, I had to move forwa
 
 From our experimentation with the stock JE2 strains, we were able to observe SOD activity in two conditions: our high glucose 2.5 g/L condition, and TSB (**Figure 6**). We found a significant difference in SOD enzymatic activity between the two conditions, suggesting that carbon sources might affect MRSA virulence capacity. The 2.5 g/L CDMG only has one carbon source, while TSB is an undefined media with multiple potential carbon sources. While not directly related to the research questions I had set out to answer at the beginning of the summer, this MRSA-carbon source interaction provides another potential topic for further investigation.
 
+![Fig6](/images/AB_Figure_6_SOD.PNG)
+
+**Figure 6:** Measured SOD concentration of lab stock strain JE2 in a high glucose environment and in TSB. While further testing is required to infer any significant results, this shows how glucose environment may impact SOD concentration in _S. aureus_.
+
 ### Conclusions & Further Avenues of Research
 
 Two weeks after I had conducted the final experiment in the lab, I presented a poster I’d created for my summer research at the Undergradute Research Symposium, the capstone event of the SURE program. Given the quick turn-around, I was very thankful to my mentor for ample assistance in designing the layout of the poster and using language that conveyed my research in a succinct and precise manner. I also had a practice run of my presentation with other members in the lab, who all offered both praise and helpful suggestions for revisions.
@@ -94,10 +98,6 @@ Two weeks after I had conducted the final experiment in the lab, I presented a p
 Though my summer’s project has come to an end, the overall investigation of MRSA behavior in hyperglycemic conditions still has much left to inquire further. Genomic analysis would reveal the clinical isolates’ SOD production abilities and how the glucose environment might be affecting superoxide levels in _S. aureus_ intracellular content. Also, further testing for CC5 fitness differences in low-glucose environments would be valuable to explore the unique growth curve morphology, which we have found to be unrelated to acetate consumption. Finally, we also hypothesize that the experimental evolution of _S. aureus_ in a hyperglycemic environment could yield changes in the genome and adaptation to the high glucose environment, with particular interest for those CC8 strains.
 
 This spring semester I will be continuing my work with the Read lab, having concluded my undergraduate career in December. My time in the lab has spurred me on to pursue a graduate degree, either in genetics or bioethics. All of the graduate students in the lab work on compelling and interesting projects, and any interactions I have had with them are both positive and supportive. I was welcomed and treated as a colleague, while also patiently guided as a novice in microbiological research. I feel particularly fortunate, and I look forward to my continued work in the Read Lab with the hope that my experience recounted here encourages more undergraduates to pursue their own research projects.
-
-![Fig6](/images/AB_Figure_6_SOD.PNG)
-
-*Fig6 legend?*
 
 ### References Cited
 
