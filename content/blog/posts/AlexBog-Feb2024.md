@@ -2,7 +2,7 @@
 title: "Interactions between MRSA and hyperglycemic environments - an undergraduate research journey" 
 description: ""
 author: ["Alex Banul"]
-date: "2024-02-12"
+date: "2024-02-09"
 featured_image: "/images/AB_Figure_2_4_graphs.png"
 draft: false
 ---
