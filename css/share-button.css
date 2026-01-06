@@ -41,13 +41,6 @@
   stroke: none
 }
 
-.resp-sharing-button--twitter {
-  background-color: #55acee
-}
-
-.resp-sharing-button--twitter:hover {
-  background-color: #2795e9
-}
 
 .resp-sharing-button--pinterest {
   background-color: #bd081c
@@ -134,15 +127,15 @@ background-color: #FF6600
   background-color: #43648c
 }
 
-.resp-sharing-button--twitter {
-  background-color: #55acee;
-  border-color: #55acee;
+.resp-sharing-button--bluesky {
+  background-color: #1185fe;
+  border-color: #1185fe;
 }
 
-.resp-sharing-button--twitter:hover,
-.resp-sharing-button--twitter:active {
-  background-color: #2795e9;
-  border-color: #2795e9;
+.resp-sharing-button--bluesky:hover,
+.resp-sharing-button--bluesky:active {
+  background-color: #0a6edb;
+  border-color: #0a6edb;
 }
 
 .resp-sharing-button--email {
