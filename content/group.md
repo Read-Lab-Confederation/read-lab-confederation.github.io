@@ -15,7 +15,7 @@ We are based in the School of Medicine, Division of Infectious Diseases at  Emor
 {{< group "current_members" >}}
 
 ### Former Members
-Tauqeer Alam, Ashley Alexander, Daniel Cox, Andrei Bombin, Jamie Davis, Michelle Davis, Matthew Ezewudo, Michael Frisch, Chad Haase, [Sandeep Joseph](https://twitter.com/jose_sandeep), Kenan Jijakli, [Jon Moller](https://twitter.com/abraham_moller), Karla Passalacqua, [Robert Petit](https://twitter.com/rpetit3), Jessica Peterson, Vishnu Raghuram, [Michelle Su](https://twitter.com/mishmash_su), Kranthi Vavikolanu, [Milton Tan](https://twitter.com/mtanichthys), Emily Wissel
+Tauqeer Alam, Ashley Alexander, Daniel Cox, Andrei Bombin, Jamie Davis, Michelle Davis, Matthew Ezewudo, Michael Frisch, Chad Haase, [Sandeep Joseph](https://twitter.com/jose_sandeep), Kenan Jijakli, [Jon Moller](https://twitter.com/abraham_moller), Karla Passalacqua, [Robert Petit](https://twitter.com/rpetit3), Jessica Peterson, Vishnu Raghuram, [Michelle Su](https://twitter.com/mishmash_su), [Brooke Talbot](https://bmtalbot.github.io/), Kranthi Vavikolanu, [Milton Tan](https://twitter.com/mtanichthys), Emily Wissel
 
 ### Older Group Pictures
 
