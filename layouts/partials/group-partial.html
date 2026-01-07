@@ -25,6 +25,11 @@
                             Twitter: <a href="https://twitter.com/{{.social.twitter}}" target="_blank">@{{.social.twitter}}</a>
                         </p>
                     {{ end }}
+                    {{ if .social.bluesky }}
+                        <p class="social bluesky">
+                            BlueSky: <a href="{{.social.bluesky}}" target="_blank">{{.social.bluesky}}</a>
+                        </p>
+                    {{ end }}
                     {{ if .social.github }}
                         <p class="social github">
                             GitHub: <a href="https://github.com/{{.social.github}}" target="_blank">@{{.social.github}}</a>
