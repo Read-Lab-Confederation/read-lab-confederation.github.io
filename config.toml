@@ -25,6 +25,11 @@ enableRobotsTXT = true
     title = "blog section"
     url = "/blog/"
 [[menu.main]]
+    identifier = "news"
+    name = "News"
+    title = "news section"
+    url = "/news/"
+[[menu.main]]
     identifier = "research"
     name = "Research"
     title = "research section"

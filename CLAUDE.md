@@ -79,10 +79,30 @@ Main group photo and historical photos are managed in `content/group.md`. Images
 
 Configured in `config.toml` under `[[menu.main]]` sections. Social icons in header controlled by `[params]` section (twitter, facebook, github, etc.). Empty string values hide the icon.
 
+### Adding News Posts
+
+The News section provides short updates and announcements with automatic RSS feed generation.
+
+1. Create a new markdown file in `content/news/` with naming convention: `YYYY-MM-DD-title.md`
+2. Include YAML frontmatter with title, date, and draft status:
+   ```yaml
+   ---
+   title: "Your News Title"
+   date: 2026-01-08
+   draft: false
+   ---
+   ```
+3. Add your news content in markdown format below the frontmatter
+
+**RSS Feed:** Automatically available at `/news/index.xml`
+
+News posts appear in reverse chronological order on the `/news/` page.
+
 ## Important Files
 
 - `config.toml` - Site configuration, navigation menu, social links, theme settings
 - `content/group.md` - Group page content including current/historical group photos
+- `content/news/_index.md` - News section landing page
 - `layouts/partials/group-partial.html` - Individual member profile display logic
 - `layouts/shortcodes/group.html` - Multi-function shortcode for group photos and member grids
 - `static/css/share-button.css` - Social sharing button styles (includes custom bluesky styling)
