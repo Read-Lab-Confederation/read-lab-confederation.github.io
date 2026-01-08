@@ -8,7 +8,7 @@ type: "group"
 
 We are based in the School of Medicine, Division of Infectious Diseases at  Emory University in Atlanta, Georgia.
 
-{{< group "group_picture" "/images/Group-2025.jpg" "December 2025 L-R, Charlotte, Ana, Tim, Tim, Megan, Katrina, Hannah" >}}
+{{< group "group_picture" "/images/Group-2025.jpg" "December 2025 L-R, Charlotte, Ana, Tim, Megan, Katrina, Hannah" >}}
 
 ### Current Members
 
