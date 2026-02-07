@@ -1,0 +1,7 @@
+---
+title: "Dr. Parul Sharma Presents to TargetAMR Group"
+date: 2025-02-05
+draft: false
+---
+
+Dr. Parul Sharma gave a short seminar to the [TargetAMR group](https://www.targetamr.org.uk/). A recording can be [viewed on YouTube](https://www.youtube.com/watch?v=sMiSZRsKGOg).
