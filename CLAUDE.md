@@ -98,6 +98,8 @@ The News section provides short updates and announcements with automatic RSS fee
 
 News posts appear in reverse chronological order on the `/news/` page.
 
+**Publication cross-listing rule:** When a news item mentions a new publication, always look up the full citation (all authors, journal, year, DOI) and add it to the "Recent Publications" section in `content/research.md` under the appropriate year heading. Create a new year heading if needed. Use the same citation format as existing entries.
+
 ## Important Files
 
 - `config.toml` - Site configuration, navigation menu, social links, theme settings

@@ -19,6 +19,12 @@ Through a network of collaborations we have studied the genomes of a wide range 
 
 ### Recent Publications
 
+#### 2026
+
+Damhorst GL, Boulis MJ, Nelson EB, Hofstetter KS, Kim J, Sakurai Y, Correa J, Adam N, Reslane I, Muse CG, Panizzi P, Fey PD, Bryksin J, Alter DN, Maier CL, Read TD, Satola SW, Lam WA. Variable Staphylothrombin Activity in Staphylococcus aureus Bloodstream Infections. *J Infect Dis.* 2026;jiag012. [https://doi.org/10.1093/infdis/jiag012](https://doi.org/10.1093/infdis/jiag012)
+
+Sharma P, Dean D, Read TD. Putative azithromycin resistance mutations in Chlamydia trachomatis are globally distributed but arose before azithromycin was discovered. *Antimicrob Agents Chemother.* 2026;e0170825. [https://doi.org/10.1128/aac.01708-25](https://doi.org/10.1128/aac.01708-25)
+
 #### 2025
 
 Talbot BM, Jacko NF, Hofstetter KS, et al. Methicillin-Resistant Staphylococcus aureus Bacteremia Relapses Show Diverse Genomic Profiles but Convergence in Bacteremia-Associated Genes. *J Infect Dis.* 2025;232(6):1338-1350. [https://doi.org/10.1093/infdis/jiaf352](https://doi.org/10.1093/infdis/jiaf352)
