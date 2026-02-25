@@ -100,6 +100,10 @@ News posts appear in reverse chronological order on the `/news/` page.
 
 **Publication cross-listing rule:** When a news item mentions a new publication, always look up the full citation (all authors, journal, year, DOI) and add it to the "Recent Publications" section in `content/research.md` under the appropriate year heading. Create a new year heading if needed. Use the same citation format as existing entries.
 
+**People linking rule:** When mentioning a person by name in a news item, link their name if possible:
+- Current members (those with a file in `content/group/`): link to `/group/${firstname}-${lastname}/`
+- Former members (listed in `content/group.md` under "### Former Members"): link to `/group/` (the group page where their name appears in the Former Members list)
+
 ## Important Files
 
 - `config.toml` - Site configuration, navigation menu, social links, theme settings
