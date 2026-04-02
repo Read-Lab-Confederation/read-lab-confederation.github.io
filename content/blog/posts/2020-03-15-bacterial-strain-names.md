@@ -3,7 +3,7 @@ title: "Bacterial strain names and Biosample IDs"
 description: ""
 author: ["Tim Read"]
 date: 2020-03-15
-featured_image: "/images/biosample_logo.png"
+featured_image: "/images/posts/2020-03-15-bacterial-strain-names/biosample-logo.png"
 draft: false
 ---
 

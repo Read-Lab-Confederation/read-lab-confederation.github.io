@@ -3,7 +3,7 @@ title: "Seven significant bacterial genomics papers from the 2010s"
 description: ""
 author: ["Tim Read"]
 date: 2020-01-08
-featured_image: "/images/2020-01-08_blogpost.jpg"
+featured_image: "/images/posts/2020-01-08-genomics-papers-2010s/header.jpg"
 draft: false
 ---
 

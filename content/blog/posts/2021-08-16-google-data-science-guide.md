@@ -3,7 +3,7 @@ title: "OK Google, How do I Learn Data Science?"
 description: "An R how-to guide to finding your how-to guides in Google Search history"
 author: ["Brooke Talbot"]
 date: "2021-08-16"
-featured_image: "/images/bt-Image_5.jpg"
+featured_image: "/images/posts/2021-08-16-google-data-science-guide/image-5.jpg"
 draft: false
 ---
 <a href="https://doi.org/10.5281/zenodo.7278437"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.7278437.svg" alt="DOI" width="160" height="25"></a>
@@ -38,7 +38,7 @@ allSearched <- ggplot(Searched, aes(x = year)) +
 allSearched
 ```
 
-![](/images/bt-Image_1.jpg)
+![](/images/posts/2021-08-16-google-data-science-guide/image-1.jpg)
 
 Unsurprisingly, I had a huge spike in the number of searches in the year 2020, which is likely the result of a mix of the switch to a work-from-home environment ("how to update Zoom desktop"), new-demands at work ("how to get healthcare workers masks"), and taking a big step in starting my current PhD program at Emory, switching fields from epidemiology to a course of study more focused on microbial genetics ("what is Bioconda?").
 
@@ -67,7 +67,7 @@ questionsSearched <- ggplot(Searched_Q_Sum, aes(x = year, y=n, fill=Questions)) 
 questionsSearched
 ```
 
-![](/images/bt-Image_2.jpg)
+![](/images/posts/2021-08-16-google-data-science-guide/image-2.jpg)
 
 These phrases make up about 6.6% of all of my searches (2,528 of 38,269 searches!), which while proportionally small is still a tractable amount to work with. So far so good. But what about the kinds of things I am trying to learn with these questions?  
 
@@ -93,7 +93,7 @@ computationalQs <- ggplot(Searched_C_Sum[which(Searched_C_Sum$Questions=="1"),],
                      ggtitle("How often am I asking for computational help from Professor Google?")
 computationalQs
 ```
-![](/images/bt-Image_3.jpg)
+![](/images/posts/2021-08-16-google-data-science-guide/image-3.jpg)
 
 It's quite shocking to me that proportionally the year 2020 really took a hold of my computational questions. After all, I really started to learn how to work with robust statistical programs in 2016, and a lot of my job as an epidemiologist revolved around trying (and failing and trying again) to build and analyze large datasets. One reason for the shift could be that I really did take on learning much more computation in the last year. Other reasons, too, could be related to a bias in my search behavior changing in 2020, including using the question format more frequently (Sorry Jeeves!), or switching from a work device which is sometimes logged into my account versus a personal device which is almost always logged into my account.  
 
@@ -110,7 +110,7 @@ ComputationalQsDay <- ggplot(Searched_C_Sum[which(Searched_C_Sum$Questions=="1")
                      ggtitle("How often do I ask for computational help by weekday?")
 ComputationalQsDay
 ```
-![](/images/bt-Image_4.jpg)
+![](/images/posts/2021-08-16-google-data-science-guide/image-4.jpg)
 
 I guess I am quite inspired or wired on Wednesdays!
 
@@ -137,7 +137,7 @@ ann_text <- data.frame(day = "Wednesday", n = 29 ,lab = "Text",
 Day_years + geom_label(data = ann_text,label = "Seriously, what is Bioconda?", size = 4, show.legend = FALSE, fill = "white" )
 
 ```
-![](/images/bt-Image_5.jpg)
+![](/images/posts/2021-08-16-google-data-science-guide/image-5.jpg)
 
 I guess the Wednesday trend and the volume increase really does line up with the start of the semester! 
 

@@ -3,7 +3,7 @@ title: "How I freed NCBI antibiogram data from XML"
 description: ""
 author: ["Tim Read"]
 date: "2023-05-18"
-featured_image: "/images/Fig1-202302.png"
+featured_image: "/images/posts/2023-05-18-parsing-ncbi-antibiograms/fig-1.png"
 draft: false
 ---
 
@@ -28,19 +28,19 @@ Antibiotic resistant bacteria continue to become more common worldwide.  Diagnos
 NCBI has been [collecting antibiograms ](https://www.ncbi.nlm.nih.gov/biosample/docs/antibiogram/)and linking them to BioSample accessions, which can then be linked to a variety of other databases.  (I also looked briefly at the ENA (Matatmoros et al) and PATRIC (Antonopoulos et al) databases but only found a few records when using the general search term “antibiogram”. I may come back to investigate  these resources in the future but for now I concentrated on the NCBI.)  When I searched the Biosample database for the term”antibiogram” I got 483 hits.  These have a list of three-letter codes of drugs for the strain presumably has resistance, eg. “AMP-GEN-SSS-SXT”.  I suspected that there was more than that, and actually, if you refine the search using “antibiogram[filter]” you get thousands of hits (thanks Emily!) (Oddly, the results from “antibiogram[filter]” don’t include the ones from the search for just “antibiogram”).  Further, you can add a filter for strains which also have an SRA accession (potentially genome sequence data).  
 
 
-![Fig1](/images/Fig1-202302.png)
+![Fig1](/images/posts/2023-05-18-parsing-ncbi-antibiograms/fig-1.png)
 
 The data is already extensive: - 25,046 BioSample accessions.  Looking through typical records, most had a table with 10 columns.
 
-![Fig2](/images/Fig2-202303.png)
+![Fig2](/images/posts/2023-05-18-parsing-ncbi-antibiograms/fig-2.png)
 
 But a few (exclusively Mycobacterium tuberculosis, I think) had antibiogram tables with 6 columns.
 
-![Fig3](/images/Fig3-202303.png)
+![Fig3](/images/posts/2023-05-18-parsing-ncbi-antibiograms/fig-3.png)
 
 When I tried to download these data I made the unpleasant finding that the standard text file (itself in a freakishly difficult format for parsing) didn’t contain the antibiotic tables.  In order to use the information I would have to work with the XML-formatted output file.
 
-![Fig4](/images/Fig4-202303.png) 
+![Fig4](/images/posts/2023-05-18-parsing-ncbi-antibiograms/fig-4.png) 
 
 ## XML: Oh no!
 

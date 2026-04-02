@@ -3,7 +3,7 @@ title: "Introduction to Bioconda on MacOS / Linux"
 description: ""
 author: ["Tim Read"]
 date: 2019-10-23
-featured_image: "/images/bioconda.png"
+featured_image: "/images/posts/2019-10-23-conda-intro/bioconda.png"
 draft: false
 ---
 

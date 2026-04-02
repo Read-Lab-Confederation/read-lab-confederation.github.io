@@ -100,15 +100,60 @@ News posts appear in reverse chronological order on the `/news/` page.
 
 **Publication cross-listing rule:** When a news item mentions a new publication, always look up the full citation (all authors, journal, year, DOI) and add it to the "Recent Publications" section in `content/research.md` under the appropriate year heading. Create a new year heading if needed. Use the same citation format as existing entries.
 
+**PubMed update rule:** Any time the news section is updated (new post added or existing post edited), search PubMed for recent publications by lab members and update the "Recent Publications" section in `content/research.md` with any new entries not already listed. Use the NCBI E-utilities API (e.g., `https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=Read+TM[Author]&retmax=10&sort=date`) or search PubMed directly to find new publications. Add any missing entries under the appropriate year heading using the same citation format as existing entries.
+
 **People linking rule:** When mentioning a person by name in a news item, link their name if possible:
 - Current members (those with a file in `content/group/`): link to `/group/${firstname}-${lastname}/`
-- Former members (listed in `content/group.md` under "### Former Members"): link to `/group/` (the group page where their name appears in the Former Members list)
+- Former members (listed in `content/group.md` under "### Former Members"): link to their external profile (see Former Members linking rule below), or fall back to `/group/` if no profile is found
+
+**Former Members linking rule:** When adding or updating a former member entry in `content/group.md`, search for their profile in this priority order — stop as soon as one is found:
+1. LinkedIn (search `site:linkedin.com/in "Firstname Lastname"` + Emory/microbiology context)
+2. GitHub (search `site:github.com "Firstname Lastname"` or known handle)
+3. Personal or lab website
+
+Only link if confident the profile belongs to the correct person. If none found, leave the name unlinked. Apply this rule when adding any new former member and when updating existing entries.
+
+## File and Image Naming Schema
+
+All filenames must be **lowercase kebab-case** (hyphens only, no underscores, no mixed case). File extensions must be lowercase (`.jpg` not `.JPG`, `.png` not `.PNG`).
+
+**New content rule:** Any new content must follow this schema. When adding any file, verify it conforms before saving.
+
+### Content files
+
+| Type | Pattern | Example |
+|---|---|---|
+| News post | `content/news/YYYY-MM-DD-kebab-slug.md` | `2026-04-02-tim-read-senior-editor.md` |
+| Blog post | `content/blog/posts/YYYY-MM-DD-kebab-slug.md` | `2024-02-09-alex-bog-mrsa-hyperglycemic.md` |
+| Group member markdown | `content/group/firstname-lastname.md` | `tim-read.md` |
+| Group member JSON | `data/group/firstname-lastname.json` | `tim-read.json` |
+
+### Images
+
+| Type | Path | Example |
+|---|---|---|
+| Blog post images | `static/images/posts/YYYY-MM-DD-post-slug/description.png` | `posts/2024-02-09-alex-bog-mrsa-hyperglycemic/fig-1-tree.png` |
+| News images (if needed) | `static/images/news/YYYY-MM-DD-news-slug/description.png` | `news/2026-04-02-senior-editor/photo.jpg` |
+| Group member photo | `static/images/group/firstname-lastname.jpg` | `group/tim-read.jpg` |
+| Group photo | `static/images/group/group-YYYY-MM-DD.jpg` | `group/group-2025-12-01.jpg` |
+| Lab Pictures gallery image | `static/images/group/group-YYYY-MM-DD.jpg` (same location as group photos) | `group/group-2025-12-01.jpg` |
+
+**Image naming within subdirectories:** Use `fig-N-description.png` for paper/data figures, `image-N.jpg` for generic photos. Keep names short and descriptive.
+
+### Lab Pictures page
+
+`content/lab-pictures.md` is a gallery of group photos and other images not attached to a specific blog/news post. It uses the `{{< gallery-image "/images/..." "caption" >}}` shortcode and the `layouts/labpictures/single.html` layout.
+
+**Lab Pictures rule:** Any image that is not the current group photo on the Group page and is not directly linked to a blog post or news item should be added to `content/lab-pictures.md` using the `gallery-image` shortcode. Keep entries ordered newest first (by the date the photo was taken). When a group photo is replaced as the current photo on the Group page, add the old photo to `content/lab-pictures.md`.
 
 ## Important Files
 
 - `config.toml` - Site configuration, navigation menu, social links, theme settings
-- `content/group.md` - Group page content including current/historical group photos
+- `content/group.md` - Group page content (current group photo, member grid, former members)
+- `content/lab-pictures.md` - Gallery of group photos and other images, newest first
 - `content/news/_index.md` - News section landing page
+- `layouts/labpictures/single.html` - Lab Pictures page layout (2-column flex grid)
 - `layouts/partials/group-partial.html` - Individual member profile display logic
 - `layouts/shortcodes/group.html` - Multi-function shortcode for group photos and member grids
+- `layouts/shortcodes/gallery-image.html` - Shortcode for Lab Pictures gallery entries
 - `static/css/share-button.css` - Social sharing button styles (includes custom bluesky styling)

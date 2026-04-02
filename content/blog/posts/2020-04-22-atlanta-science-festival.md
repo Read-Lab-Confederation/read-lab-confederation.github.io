@@ -3,7 +3,7 @@ title: "2020 Atlanta Science Festival :("
 description: ""
 author: ["Jon Moller", "Ashley Alexander"]
 date: 2020-04-22
-featured_image: "/images/ASF2020-image1.png"
+featured_image: "/images/posts/2020-04-22-atlanta-science-festival/image-1.png"
 draft: false
 ---
 
@@ -12,7 +12,7 @@ In March this year we were looking forward to putting together a booth for the g
 
 ## Bacteriophages
 
-![Figure 1](/images/ASF2020-image1.png)
+![Figure 1](/images/posts/2020-04-22-atlanta-science-festival/image-1.png)
 
 <sup>**Figure 1** - Phages attaching to the surface of a bacterial cell, sometimes only with tail fibers and other times with tail fibers and baseplate. Source: Gut Microbiota For Health/European Society of Neurogastroenterology and Motility.</sup>
 
@@ -34,7 +34,7 @@ Here are links to get started:
 
 ## Genome assembly
 
-![Figure 2](/images/ASF2020-image2.png)
+![Figure 2](/images/posts/2020-04-22-atlanta-science-festival/image-2.png)
 <sup>**Figure 2** - Overlap-layout-consensus algorithm for sequence assembly. Source: Wikimedia Commons.</sup>
 
 #### What is it and why is it important?
@@ -50,7 +50,7 @@ We created a [YouTube video](https://youtu.be/q0BEopmp_FY) of the assembly proce
 
 ## Microbial diversity
 
-![Figure 3](/images/ASF2020-image3.png)
+![Figure 3](/images/posts/2020-04-22-atlanta-science-festival/image-3.png)
 
 <sup>**Figure 3** - This stunning fluorescent image captures the diverse community of bacterial species that can colonize teeth! Who knew that fuzz on your molars could be so beautiful?? Citation: Mark Welch JL, Rossetti BJ, Rieken CW, Dewhirst FE, Borisy GG. Biogeography of a human oral microbiome at the micron scale. _Proc Natl Acad Sci U S A_ 2016;113:E791–800.</sup>
 

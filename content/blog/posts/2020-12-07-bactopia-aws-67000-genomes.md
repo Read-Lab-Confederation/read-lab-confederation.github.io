@@ -4,7 +4,7 @@ subtitle: "*How we spent $12K of Jeff Bezos' cash*"
 description: ""
 author: ["Robert Petit"]
 date: '2020-12-07'
-featured_image: "/images/posts/bactopia-aws-and-67000-genomes/final-nf-tower.png"
+featured_image: "/images/posts/2020-12-07-bactopia-aws-67000-genomes/final-nf-tower.png"
 draft: false
 ---
 
@@ -156,7 +156,7 @@ Every one of them.
 ## The Launch Phase
 Honestly there isn't much to say here, a lot happened but at the same time not much happened. I had planned to submit genomes in batches of 5,000 or so, but decided:
 
-![Final Tower Stats](/images/posts/bactopia-aws-and-67000-genomes/submit-all.png)
+![Final Tower Stats](/images/posts/2020-12-07-bactopia-aws-67000-genomes/submit-all.png)
 
 I went for it, and submitted all of the remaining 65,000 genomes at once. I also used [Nextflow Tower](https://tower.nf/) to track the progress, which made it more fun and easy to track.
 
@@ -168,11 +168,11 @@ Since I used Nextflow Tower I was able to get some pretty nice stats associated 
 
 Basically, I used a crap ton of resources over those 5 days!
 
-![Final Tower Stats](/images/posts/bactopia-aws-and-67000-genomes/final-nf-tower.png)
+![Final Tower Stats](/images/posts/2020-12-07-bactopia-aws-67000-genomes/final-nf-tower.png)
 
 Nearly all jobs took around 55 minutes to complete using only 4-cores and 16GB of memory. This is actually (at least I think so!) pretty cool, because it shows that you don't necessarily need a beefy server to run Bactopia. In most cases, a basic desktop is enough, although it might take longer. 
 
-![Job Duration](/images/posts/bactopia-aws-and-67000-genomes/job-duration.png)
+![Job Duration](/images/posts/2020-12-07-bactopia-aws-67000-genomes/job-duration.png)
 
 
 ## How much did it cost?

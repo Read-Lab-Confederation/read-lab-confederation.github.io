@@ -3,7 +3,7 @@ title: An introduction to running Bactopia on Amazon Web Services
 description: ""
 author: ["Tim Read"]
 date: "2021-05-15"
-featured_image: "/images/aws-bactopia-image3.png"
+featured_image: "/images/posts/2021-05-15-aws-bactopia-intro/image-3.png"
 draft: false
 ---
 
@@ -21,7 +21,7 @@ There are infinite strategies for setting up AWS that differ in parameters such 
 
 First thing was to log in AWS and create a new S3 bucket (sort of equivalent to an “uber”-directory name) called “tdr-staph-fastqs”. This bucket was set up as private, meaning only myself and people I authorize can access.  Then I uploaded some FASTQ files using the [AWS CLI](https://aws.amazon.com/cli/) (Command Line Interface), but there are many other ways to interface with S3.  My dataset was 5 randomly chosen paired end Illumina runs of _S. aureus_ from [this paper](https://doi.org/10.1186/s12866-018-1336-z). The total size was 1.8 Gbytes.  As AWS charges me $0.023 per GByte per month, I could afford to keep it there while I played around with EC2 compute strategies.
 
-![S3 set up](/images/aws-bactopia-image1.png)
+![S3 set up](/images/posts/2021-05-15-aws-bactopia-intro/image-1.png)
 
 ## Running all genomes on one machine
 
@@ -114,11 +114,11 @@ The first time bactopia is run on a machine it builds 12 conda environments for 
 
 The script generates a URL to Nextflow Tower, so you can watch it all happening in real time.  (_Beware: Nextflow Tower is hypnotizing and wonderful, and a bit of a productivity killer._)  The run was all over in an hour and a half.
 
-![Tower Stats](/images/aws-bactopia-image2.png)
+![Tower Stats](/images/posts/2021-05-15-aws-bactopia-intro/image-2.png)
 
 Nextflow produces a lot of nice statistics that the Tower visualizes and it is clear to see that the _blast_proteins_ is a bit of a culprit in slowing down the run. This is because of the large number of proteins in the custom _S. aureus_ database used here. In later versions of the software, we may make some tweaks to this process so that it doesn’t slow down the rest of the pipeline too  much.
 
-![Process Stats](/images/aws-bactopia-image3.png)
+![Process Stats](/images/posts/2021-05-15-aws-bactopia-intro/image-3.png)
 
 So all the data is now in the output directory, which can be moved to S3, or downloaded directly from EBS using scp or rsync.  These directories can be mined for assemblies, blast results etc. I I also used these to run a couple of [bactopia-tools](https://bactopia.github.io/bactopia-tools/) to further summarize and query the data.
 

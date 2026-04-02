@@ -24,7 +24,7 @@ I am not presumptuous enough to even try at defining strain for bacteriologists 
 
 I believe there are practical reasons for using a different vocabulary for bacterial cultures manipulated in the laboratory versus nomenclature for describing how the genome of the bacterium falls in the hierarchical taxonomy of the species. At the present time, it is common to call both *"strains"*.  The photo below (from Wikimedia Commons) is a plate that was obtained by spreading a liquid culture of a bacterial strain *"X"* (will come to what that word might mean later). Each individual colony on this plate could give rise to a pure culture line stored as its own in-format name (e.g A1, A2, A3). Each colony may have been founded by bacteria with identical genome sequences, or maybe one has a single mutation, or maybe one is a contaminant from a different species.  We won’t know until the genomes are sequenced.
 
-![Figure 1](/images/Ecoli_colonies.png)
+![Figure 1](/images/posts/2020-11-15-strain-definition/ecoli-colonies.png)
 
 <sup>**Figure** - Is each one of these colonies a different *"strain"*?. I would call cultures from each single colony *"isolates"*. In terms of genome relationships, each isolate probably represents an individual "clone" of one bacterial strain. (Photo source Wikimedia Commons, User:MadPrime).</sup>
 

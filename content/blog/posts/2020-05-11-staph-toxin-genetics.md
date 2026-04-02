@@ -3,7 +3,7 @@ title: "Genetics of strain-specific levels of toxin production in *Staphylococcu
 description: ""
 author: ["Kyle Winston"]
 date: 2020-05-11
-featured_image: "/images/Kyle_Michelle_fig-4-full.png"
+featured_image: "/images/posts/2020-05-11-staph-toxin-genetics/fig-4-full.png"
 draft: false
 ---
 
@@ -13,13 +13,13 @@ draft: false
 
 Extracellular toxins play a central role in many *Staphylococcus aureus* infections. However, producing toxins can take resources away from other cellular functions, and may in fact limit bacterial growth and come at a negative fitness cost. Therefore, bacteria have complex regulatory mechanisms to turn on and off the production of various toxins. In *S. aureus*, delta-toxin is an important contributor to disease severity, but little was known about the variation in production in different strains and which genetic factors influence it. In this paper Michelle Su used genome-wide association study (GWAS) methods and constructed machine learning (XGBoost) models to better understand strain variation in delta-toxin production and identify genetic loci that are important for delta-toxin production.
 
-![](/images/Kyle_Michelle_fig-3-full.png)
+![](/images/posts/2020-05-11-staph-toxin-genetics/fig-3-full.png)
 
 <sup>**Associations of delta-toxin production to methicillin resistance, Agr type and clonal complex (Fig. 3 in the paper)** (A) Differences in delta-toxin production between MSSA and MRSA strains. (B) Differences in δ-toxin production between agr types. (C) Differences in δ-toxin production between CCs. *p &lt; .05, **p &lt; .01, ***&lt;.001.</sup>
 
 Michelle found several interesting genomic associations with delta-toxin production. The four known accessory gene regulator (Agr) groups in _S. aureus _have previously been found to be linked to different levels of cytotoxicity. Michelle found that there were significant differences in delta-toxin production between the four Agr groups, with Agr I and IV having higher levels of delta-toxin production than Agr III. She also found that methicillin resistance was associated with a decreased delta-toxin production, which makes sense since methicillin resistance has been shown to interfere with Agr functions and thus limit toxin production. Finally, she characterized the delta-toxin production in different clonal complexes and found that the average production in CC30 strains was significantly lower than in CC45 and CC121 strains. This matches what would be expected from clinical findings relating clonal complexes and atopic dermatitis, the main disease associated with delta-toxin. Compared to their representation in colonization, CC30 is underrepresented in atopic dermatitis cases, where CC121 is overrepresented.
 
-![](/images/Kyle_Michelle_fig-4-full.png)
+![](/images/posts/2020-05-11-staph-toxin-genetics/fig-4-full.png)
 
 <sup>**Impact of gene knockouts on δ-toxin production (Fig. 4 in the paper)** A subset of genes that were found to be significantly associated with δ-toxin by GWAS were tested for their effect of δ-toxin production. δ-toxin from transposon mutants from the Nebraska Transposon Mutant Library (NTML) was measured via HPLC. *p &lt; .05.</sup>
 

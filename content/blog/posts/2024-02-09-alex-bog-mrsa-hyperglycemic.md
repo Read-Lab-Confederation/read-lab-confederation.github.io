@@ -3,7 +3,7 @@ title: "Interactions between MRSA and hyperglycemic environments - an undergradu
 description: ""
 author: ["Alex Banul"]
 date: "2024-02-09"
-featured_image: "/images/AB_Figure_2_4_graphs.png"
+featured_image: "/images/posts/2024-02-09-alex-bog-mrsa-hyperglycemic/fig-2-graphs.png"
 draft: false
 ---
 
@@ -24,7 +24,7 @@ The aim of this research was to understand the role host conditions might play i
 
 At the time I joined the Read Lab, another ongoing project was examining clonal spread of MRSA bloodstream infections of hospitalized adults. This project utilized a cohort of 105 _S. aureus_ strains that were isolated from patients admitted to either one of two hospitals in the University of Pennsylvania hospital system , and then whole-genome shotgun sequenced using Illumina Miseq and Illumina Next era library kits (Talbot et al., 2022). This collection of strains would both serve as my experimental cohort and my introduction to working with genetic data, as I learned how to translate the strain’s genetic content into a phylogenetic tree (**Figure 1**).
 
-![Fig1](/images/AB_Figure_1_tree.PNG)
+![Fig1](/images/posts/2024-02-09-alex-bog-mrsa-hyperglycemic/fig-1-tree.png)
 
 **Figure 1:** *Phylogeny of 105 _S. aureus_ strains from University of Pennsylvania hopsital cohort. Colored dots indicate lineage, Blue bars indicate diabetes status, and the red/yellow bars indicate type of acquisition.*
 
@@ -44,7 +44,7 @@ Experimental strains and a lab-stock JE2 strain were taken from frozen stock and
 
 After incubation, the OD value of each 10-fold dilution was obtained, with reads taken at 600 nm. Using this information, 1.5 mL of each glucose condition for each strain was prepared in a 24-well plate at starting OD values of 0.05. This 24-well plate was then put on an Eon BioTek plate reader and incubated at 37 °C. The plate shook at 286 cpm, and the OD of each well was taken every 15 minutes for 18 hours via the analysis software Gen 5 v2.06. Further analyses were performed using R Statistical Software (v4.0.4; R Core Team 2021), specifically the Growthcurver package (v0.3.1). Due to the variation observed after the initial exponential phase of growth (discussed in next paragraph), only the first four hours was considered for the growth rate calculation. The data was also normalized according to the negative controls’ OD values (wells with media and no bacteria) (**Figure 2**).
 
-![Fig2](/images/AB_Figure_2_4_graphs.png)
+![Fig2](/images/posts/2024-02-09-alex-bog-mrsa-hyperglycemic/fig-2-graphs.png)
 
 **Figure 2:** *Each plot above shows growth curves for four different samples, each replicated six times. The dark blue line in each graph is the positive control lab strain JE2. a) A CC72 sample exhibiting normal growth conditions, growing exponentially for the first 4-6 hours then hitting carrying capacity and stagnating. b) A CC78 sample in a high glucose environment, starting its exponential growth at different time points over its 6 replicates. c) A CC5 sample which exhibited a "drop" morphology shared by the other CC5 strains in the low glucose test condition. The cause of this is unknown, and likely does not reflect actual population quantification. d) The same sample from b. in a low glucose environment, once again presenting uninterpretable results.*
 
@@ -52,7 +52,7 @@ In the figure, each graph represents six replicate growth curves of a single cli
 
 Statistical analyses consisted of two-tailed t-tests comparing non-diabetic strains to diabetic ones, CC groups to one another, as well as an ANOVA test evaluating all the clonal complexes (**Figure 3**). We found that lineage had a significant effect on the growth rate of _S. aureus_ in both glucose conditions, with CC8 strains having the highest overall growth rates. Host source alone appeared to have no differences in growth rate in either glucose condition. However, a conjunctive effect of both lineage and host source was observed, with diabetic CC8 strains having higher growth rates than diabetic CC5 strains—a relationship not reflected by the CC8 and CC5 strains from non-diabetic hosts. These results suggest that host evolutionary effects may be more prevalent in certain lineages than others.
 
-![Fig3](/images/AB_Figure_3_rates.PNG)
+![Fig3](/images/posts/2024-02-09-alex-bog-mrsa-hyperglycemic/fig-3-rates.png)
 
 **Figure 3:** *Growth rates calculated via the growthcurver package in RStudio. Graph on the left seperates the two conditions, and compares growth rates between lineages. Graphs on the right compare growth rates between host diabetes status in the low glucose (top) and high glucose (bottom) conditions.*
 
@@ -66,7 +66,7 @@ We used only a subset of the strains from the clinical cohort, specifically a CC
 
 From this, we were able to determine the change in acetate concentration over time for each strain (**Figure 4**). Acetate levels kept increasing over time in the 2.5 g/L glucose condition for all samples. This was to be expected, as there would still likely be glucose in the environment for the samples to consume, and as such the samples would still be releasing acetate into the environment. The glucose-deprived environment of 0.9 g/L saw acetate levels decrease over time for all CC5 strains as well as the JE2 control. This suggests uptake of acetate by the cells. For both conditions, our CC72 sample exhibited no change in acetate levels over time. These results show that the strange growth morphology of the CC5 strains in low-glucose environment is likely not due to an inability to catabolize acetate. We also reaffirm that the carbon metabolism of _S. aureus_ varies across clonal complexes, as the CC72 sample seemed to both release and uptake acetate in equilibrium for both conditions. This unique metabolic profile demands further inquiry, both in controlled mediums such as the CDMG worked with in this study as well as real-world environments.
 
-![Fig4](/images/AB_Figure_4_acetate.PNG)
+![Fig4](/images/posts/2024-02-09-alex-bog-mrsa-hyperglycemic/fig-4-acetate.png)
 
 **Figure 4:** *Change in acetate levels per hour for four experimental strains and JE2 as positive control. Left shows low glucose condition, right shows high glucose condition. In the low glucose environment, the negative rate represents usage and uptake of acetate, while in the high glucose environment this is not discernable.*
 
@@ -75,7 +75,7 @@ From this, we were able to determine the change in acetate concentration over ti
 Superoxide dismutase (SOD), which detoxifies reactive oxygen species (ROS), is a virulence factor produced by nearly all MRSA strains. Typically, this enzyme serves the role of detoxifying ROS produced by neutrophils in the immune reaction. In the case of infection of diabetic hosts, this may seem counterintuitive at first, as neutrophils in diabetic individuals produce significantly less ROS (Insuela et al. 2020). However, diabetic individuals actually produce more ROS due to breakdown in mitochondrial function during cellular respiration (Liemburg-Apers et al. 2015), thus increasing overall ROSs. One study found _S. aureus_ that lacked the _sodA_ gene had attenuated growth in high glucose conditions compared to the wild-type (Butrico et al. 2022). This suggests SOD plays a role in increasing _S. aureus_ fitness in infections of hyperglycemic hosts. The aim of this experiment was both to understand the role that host source plays in the evolution of _sod_, and if glucose environment can affect virulence in the same way across different MRSA.
 We evaluated this via an enzymatic activity assay. The EnzyChrom Superoxide Dismutase Assay Kit from Bioassay Systems utilized a xanthine oxidase catalyzed reaction to generate superoxide (**Figure 5**). This then either reacted with a dye to produce color, or with SOD, allowing for colorimetric quantification of SOD activity via spectrophotometry (BioAssay Systems, 2021).
 
-![Fig5](/images/AB_Figure_5_rxn.PNG)
+![Fig5](/images/posts/2024-02-09-alex-bog-mrsa-hyperglycemic/fig-5-rxn.png)
 
 **Figure 5:** *The above chemical interactions represent how the EnzyChrom Superoxide Dismutase Assay Kit functions. SOD reacts with the superoxide (O2-), and any remaining superoxide reacts with a dye to form color. Thus, from color intensity measured via spectrophotometry we may infer SOD concentration.*
 
@@ -87,7 +87,7 @@ With the deadline of the summer program quickly approaching, I had to move forwa
 
 From our experimentation with the stock JE2 strains, we were able to observe SOD activity in two conditions: our high glucose 2.5 g/L condition, and TSB (**Figure 6**). We found a significant difference in SOD enzymatic activity between the two conditions, suggesting that carbon sources might affect MRSA virulence capacity. The 2.5 g/L CDMG only has one carbon source, while TSB is an undefined media with multiple potential carbon sources. While not directly related to the research questions I had set out to answer at the beginning of the summer, this MRSA-carbon source interaction provides another potential topic for further investigation.
 
-![Fig6](/images/AB_Figure_6_SOD.PNG)
+![Fig6](/images/posts/2024-02-09-alex-bog-mrsa-hyperglycemic/fig-6-sod.png)
 
 **Figure 6:** *Measured SOD concentration of lab stock strain JE2 in a high glucose environment and in TSB. While further testing is required to infer any significant results, this shows how glucose environment may impact SOD concentration in _S. aureus_.*
 

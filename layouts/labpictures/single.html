@@ -1,0 +1,13 @@
+{{ define "header" }}{{ partial "page-header.html" . }}{{ end }}
+{{ define "main" }}
+  <div class="flex-l mt2 mw8 center">
+    <article class="center cf pv5 ph3 ph4-ns w-100" style="max-width:960px;">
+      <header>
+        <h1 class="f2-ns f3 athelas mb4">{{ .Title }}</h1>
+      </header>
+      <div class="flex flex-wrap">
+        {{ .Content }}
+      </div>
+    </article>
+  </div>
+{{ end }}

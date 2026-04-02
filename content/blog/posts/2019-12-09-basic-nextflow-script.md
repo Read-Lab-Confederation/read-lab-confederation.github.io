@@ -3,7 +3,7 @@ title: "Getting to grips with Nextflow"
 description: ""
 author: ["Tim Read", "Robert Petit"]
 date: 2019-12-09
-featured_image: "/images/nextflow.png"
+featured_image: "/images/posts/2019-12-09-basic-nextflow-script/nextflow.png"
 draft: false
 ---
 

@@ -1,0 +1,6 @@
+{{- $image := index .Params 0 -}}
+{{- $caption := index .Params 1 -}}
+<div class="w-50-ns w-100 pa2">
+  <img src="{{ $image }}" alt="{{ $caption }}" style="width:100%; display:block;">
+  <p class="f6 tc gray mt1 mb3">{{ $caption }}</p>
+</div>

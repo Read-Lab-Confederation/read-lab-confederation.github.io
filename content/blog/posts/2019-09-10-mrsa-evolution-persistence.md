@@ -3,7 +3,7 @@ title: "Genomics of MRSA evolution and persistence on the human body"
 description: ""
 author: ["Tim Read"]
 date: 2019-09-10T06:45:13-04:00
-featured_image: "/images/2019-USA300-background.png"
+featured_image: "/images/posts/2019-09-10-mrsa-evolution-persistence/background.png"
 draft: false
 ---
 [Read TD, Petit III RA, Yin Z, Montgomery T, McNulty MC, David MZ. USA300 Staphylococcus aureus persists on multiple body sites following an infection. BMC Microbiol [Internet]. 2018 Dec 5;18(1):206. Available from: https://doi.org/10.1186/s12866-018-1336-z](https://bmcmicrobiol.biomedcentral.com/articles/10.1186/s12866-018-1336-z)
@@ -14,7 +14,7 @@ At the end of last year I published the results of a productive collaboration wi
 
 All the USA300 genomes were very similar to each other because they all derive from the same bacterial ancestor at the start of the outbreak of community-acquired MRSA in the late 1980s<sup><a href="https://paperpile.com/c/BGdSfL/XB67">6</a></sup>. However, strains from the same patient tended to have many fewer genetic differences (single nucleotide polymorphisms: SNPs) between them than did strains from different patients. This cutoff of about 40 SNPs in the core genome alignment allowed us to define “intra-subject lineages” (ISLs) that colonized the patients before causing SSTI and persisted after the infection.  We can’t rule out that bacteria in ISLs are being lost from a person and then re-acquired from surfaces and other family members - we know from previous studies that households can be colonized by USA300 clones for many years<sup><a href="https://paperpile.com/c/BGdSfL/5ad2">7</a></sup> - but we presume that the simplest explanation is that bacteria in ISLs are persisting and spreading among sites on humans.  
 
-![Figure 2 - intra/inter ISL](/images/2019-USA300-behind-the-paper0.png)
+![Figure 2 - intra/inter ISL](/images/posts/2019-09-10-mrsa-evolution-persistence/fig-1-isl.png)
 
 While this study was an observational pilot not powered to draw strong conclusions, it did provide some fascinating insights that we will be following up on.  We found that an USA300 ISL **lingers asymptomatically on patients after infection**, although the numbers of patients with the strain declined at the one year sampling point.  We also found that during their stay on patients strains **occasionally lost and gained mobile genetic elements** that changed the antibiotic resistance profile. **Persistence was not associated exclusively with any one of the three tested body sites,** and in many cases a strain appeared at a site on the second sampling that wasn't found in the first sampling, **suggesting movement between the sites**.  The latter results challenge the usually accepted model that the nose is the primary place where _S. aureus_ lives on the human body when it is not causing disease.
 

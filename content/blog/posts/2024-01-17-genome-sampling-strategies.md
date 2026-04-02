@@ -3,7 +3,7 @@ title: "Diving into the pool: genome based strategies to effectively sample path
 description: ""
 author: ["Tim Read","Vishnu Raghuram"]
 date: "2024-01-17"
-featured_image: "/images/2024-Vishnu-Fig2.png"
+featured_image: "/images/posts/2024-01-17-genome-sampling-strategies/fig-2.png"
 draft: false
 ---
 
@@ -18,14 +18,14 @@ The issue with using a single colony pure culture is that it might not represent
 
 We had an opportunity to test the relative benefits of pure versus pooled cultures through an ongoing study in Dr. David and Dr. Read’s labs called SEMAPHORE - Study of the Evolution of MRSA, Antibiotics, and Persistence Having the Outcome of Recurrence. MRSA, or methicillin resistant *S. aureus*, is an antibiotic resistant version of the common bacteria *S. aureus* that can cause a wide range of diseases, from minor skin infections to serious life-threatening conditions such as pneumonia, bloodstream infections, and toxic shock syndrome. SEMAPHORE aims to collect samples of *S. aureus* bacteria from infected people and find out what makes MRSA more likely to cause a recurrent infection after treatment. To do this, we swabbed study participants and took up to eight individual colonies from each swab. We also pooled the remaining colonies on each plate and stored them. Then, we sequenced the genomes of all of the samples, both individual and pooled.  At the time our study began we had pools and “collections'' of 8 single colony cultures from multiple body sites and from up to 5 quarterly time points after infection from 85 different study participants. As we had both single colony sequences and pooled sequences (“pool-seq”) from the same samples, we realized that our data gave us the chance to compare singles and pools to identify exactly what we would be missing if we only looked at singles. 
 
-![Fig1](/images/2024-Vishnu-Fig1.png)
+![Fig1](/images/posts/2024-01-17-genome-sampling-strategies/fig-1.png)
 
 *Sampling strategy*
 
 
 The main conclusions of our study were first, that there was significant variation in *S. aureus* populations from human skin, nose and throat that was missed in single colony cultures and second that pool-seq genomic data could be used to give a readout of the genomic diversity present. We found that 17 percent of samples contained multiple *S. aureus* strains, a higher number than previously appreciated. We also found that looking at only a single colony can miss important genetic variation in the total populations, such as the presence of genes involved in antibiotic resistance. We found the pool to have predicted resistance to at least one more class of antibiotics than what we found in the singles, meaning if we had picked only singles, we would have missed the full antibiotic resistance capabilities of the total population.
 
-![Fig2](/images/2024-Vishnu-Fig2.png)
+![Fig2](/images/posts/2024-01-17-genome-sampling-strategies/fig-2.png)
 
 *On average, the pool is predicted to be resistant to at least one more class of antibiotics than one or even eight colonies combined. The black vertical line shows the median number of classes of antibiotics with predicted resistance for one colony, eight colonies combined, and the pool.*
 

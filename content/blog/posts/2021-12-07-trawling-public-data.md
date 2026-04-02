@@ -3,13 +3,13 @@ title: The joys and perils of trawling through public bacterial genome data
 description: ""
 author: ["Tim Read"]
 date: "2021-12-07"
-featured_image: "/images/bacterial_genomes.png"
+featured_image: "/images/posts/2021-12-07-trawling-public-data/bacterial-genomes.png"
 draft: false
 ---
 
 For many bacterial species there are now thousands of genomes in public databases such as the NCBI Short Read Archive (SRA).  These huge datasets offer the possibility of large-scale mining to reveal species-wide patterns of genetic variability in a manner analogous to the way that vast biobanks of human genomic data are powering deep GWAS studies and GISAID has opened the door for SARS-CoV2 genomic analysis.  Our group developed the Staphopia database of 43,000+ public _Staphylococcus aureus_ genomes in 2017 (Petit and Read 2018) and the Bactopia pipelines for large scale analysis in 2020 (Petit and Read 2020).  These pipelines pull down FASTQ files deposited in the SRA database and perform quality checks, normalize coverage (usually to 100x) and perform several downstream analyses, including _de novo_ assembly.  Several issues came up when we set about using the processed genomes for large-scale exploratory analysis. The naive approach is to use every genome sequence you can get your hands on (“the Big Trawl”), and that might be OK in some circumstances but there are a number of considerations that might lead you to be more selective in choosing how to interpret results for these types of genomic expeditions.
 
-![The accelerating growth of bacterial projects in SRA.  There were > 1.5 M submitted projects by the end of 2021.](/images/animation.gif)
+![The accelerating growth of bacterial projects in SRA.  There were > 1.5 M submitted projects by the end of 2021.](/images/posts/2021-12-07-trawling-public-data/animation.gif)
 
 
 ## Much of the data in the SRA database is not linked to a publication in PubMed
