@@ -107,9 +107,11 @@ News posts appear in reverse chronological order on the `/news/` page.
 - Former members (listed in `content/group.md` under "### Former Members"): link to their external profile (see Former Members linking rule below), or fall back to `/group/` if no profile is found
 
 **Former Members linking rule:** When adding or updating a former member entry in `content/group.md`, search for their profile in this priority order — stop as soon as one is found:
-1. LinkedIn (search `site:linkedin.com/in "Firstname Lastname"` + Emory/microbiology context)
-2. GitHub (search `site:github.com "Firstname Lastname"` or known handle)
-3. Personal or lab website
+1. LinkedIn
+2. ORCID (search `site:orcid.org "Firstname Lastname"`)
+3. Google Scholar (search `site:scholar.google.com "Firstname Lastname"`)
+4. GitHub
+5. Personal or lab webpage
 
 Only link if confident the profile belongs to the correct person. If none found, leave the name unlinked. Apply this rule when adding any new former member and when updating existing entries.
 
