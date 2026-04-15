@@ -115,6 +115,8 @@ News posts appear in reverse chronological order on the `/news/` page.
 
 Only link if confident the profile belongs to the correct person. If none found, leave the name unlinked. Apply this rule when adding any new former member and when updating existing entries.
 
+**Typo checking rule:** After creating or substantially editing any text content (blog posts, news items, group member bios), proofread the text for typos and grammatical errors. Fix clear errors silently. For scientific/technical terms (species names, strain IDs, kit names, numerical measurements, software tool names), flag them to the user for verification rather than correcting them. Report all fixes made and all terms flagged in a single summary.
+
 ## File and Image Naming Schema
 
 All filenames must be **lowercase kebab-case** (hyphens only, no underscores, no mixed case). File extensions must be lowercase (`.jpg` not `.JPG`, `.png` not `.PNG`).
