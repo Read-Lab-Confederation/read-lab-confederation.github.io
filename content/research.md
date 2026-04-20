@@ -27,6 +27,10 @@ Damhorst GL, Boulis MJ, Nelson EB, Hofstetter KS, Kim J, Sakurai Y, Correa J, Ad
 
 Sharma P, Dean D, Read TD. Putative azithromycin resistance mutations in Chlamydia trachomatis are globally distributed but arose before azithromycin was discovered. *Antimicrob Agents Chemother.* 2026;e0170825. [https://doi.org/10.1128/aac.01708-25](https://doi.org/10.1128/aac.01708-25)
 
+Petit RA III, Read TD. camlhmp: a simple framework for building reproducible microbial genome-based typing tools. *Microbiol Resour Announc.* 2026. [https://doi.org/10.1128/mra.00201-26](https://doi.org/10.1128/mra.00201-26)
+
+Olagoke O, Read TD, Dean D. CtGAP 2.0: enhanced genome assembly, strain resolution, and phylogenomics for *Chlamydia trachomatis*. *Microbiol Resour Announc.* 2026;15(3):e0147025. [https://doi.org/10.1128/mra.01470-25](https://doi.org/10.1128/mra.01470-25)
+
 #### 2025
 
 Talbot BM, Jacko NF, Hofstetter KS, et al. Methicillin-Resistant Staphylococcus aureus Bacteremia Relapses Show Diverse Genomic Profiles but Convergence in Bacteremia-Associated Genes. *J Infect Dis.* 2025;232(6):1338-1350. [https://doi.org/10.1093/infdis/jiaf352](https://doi.org/10.1093/infdis/jiaf352)
@@ -42,6 +46,8 @@ Olagoke O, Aziz A, Zhu LH, et al. Whole-genome automated assembly pipeline for C
 Bixler BJ, Royer CJ, Petit RA 3rd, Moller AG, Sefton S, Thomas S, Tunali A, Collins LF, Farley MM, Satola SW, Read TD. Comparative genomic analysis of emerging non-typeable Haemophilus influenzae (NTHi) causing emerging septic arthritis in Atlanta. *PeerJ.* 2025;13:e19081. [https://doi.org/10.7717/peerj.19081](https://doi.org/10.7717/peerj.19081)
 
 Bommana S, Olagoke O, Hu YJ, Wang R, Kama M, Dehdashti M, Kodimerla R, Read TD, Dean D. Azithromycin alters the microbiome composition, function and resistome in women with Chlamydia trachomatis infections. *npj Biofilms and Microbiomes.* 2025;11:11. [https://doi.org/10.1038/s41522-025-00858-9](https://doi.org/10.1038/s41522-025-00858-9)
+
+Goetgeluck C, Olojo O, Hilton SP, Sablon O III, Freeman L, Person P, Clark D, Lyles RH, Read TD, Sheikhzadeh CC, Wolfe MK, Nadimpalli ML. Using wastewater surveillance to investigate community-level differences in antibacterial resistance in a major urban center, USA. *Appl Environ Microbiol.* 2025;91(11):e0168425. [https://doi.org/10.1128/aem.01684-25](https://doi.org/10.1128/aem.01684-25)
 
 #### 2024
 
