@@ -31,6 +31,8 @@ Petit RA III, Read TD. camlhmp: a simple framework for building reproducible mic
 
 Olagoke O, Read TD, Dean D. CtGAP 2.0: enhanced genome assembly, strain resolution, and phylogenomics for *Chlamydia trachomatis*. *Microbiol Resour Announc.* 2026;15(3):e0147025. [https://doi.org/10.1128/mra.01470-25](https://doi.org/10.1128/mra.01470-25)
 
+Olagoke O, Zheng X, Chung S, Mengistie HD, Asfawa K, Read TD, Dean D. Phylogenetic diversity, functional pathways, and network interactions of ocular chlamydia-like organisms (CLOs) in trachoma-endemic Ethiopia. *mBio.* 2026;e0053426. [https://doi.org/10.1128/mbio.00534-26](https://doi.org/10.1128/mbio.00534-26)
+
 #### 2025
 
 Talbot BM, Jacko NF, Hofstetter KS, et al. Methicillin-Resistant Staphylococcus aureus Bacteremia Relapses Show Diverse Genomic Profiles but Convergence in Bacteremia-Associated Genes. *J Infect Dis.* 2025;232(6):1338-1350. [https://doi.org/10.1093/infdis/jiaf352](https://doi.org/10.1093/infdis/jiaf352)
