@@ -21,6 +21,8 @@ Through a network of collaborations we have studied the genomes of a wide range 
 
 #### 2026
 
+Su M, Hoang KL, Penley M, Davis MH, Gresham JD, Morran LT, Read TD. Host and antibiotic jointly select for greater virulence in Staphylococcus aureus. *eLife.* 2026;107936. [https://doi.org/10.7554/eLife.107936](https://doi.org/10.7554/eLife.107936)
+
 Phillips MA, Petit RA 3rd, Weissman DB, Read TD. Transition of Staphylococcus aureus tetracycline resistance plasmid pT181 from independent multicopy replicon to predominantly integrated chromosomal element over 65 years. *eLife.* 2026;109393v1. [https://doi.org/10.7554/eLife.109393.1](https://doi.org/10.7554/eLife.109393.1)
 
 Damhorst GL, Boulis MJ, Nelson EB, Hofstetter KS, Kim J, Sakurai Y, Correa J, Adam N, Reslane I, Muse CG, Panizzi P, Fey PD, Bryksin J, Alter DN, Maier CL, Read TD, Satola SW, Lam WA. Variable Staphylothrombin Activity in Staphylococcus aureus Bloodstream Infections. *J Infect Dis.* 2026;jiag012. [https://doi.org/10.1093/infdis/jiag012](https://doi.org/10.1093/infdis/jiag012)
