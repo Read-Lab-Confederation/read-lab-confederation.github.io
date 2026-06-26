@@ -35,6 +35,8 @@ Olagoke O, Read TD, Dean D. CtGAP 2.0: enhanced genome assembly, strain resoluti
 
 Olagoke O, Zheng X, Chung S, Mengistie HD, Asfawa K, Read TD, Dean D. Phylogenetic diversity, functional pathways, and network interactions of ocular chlamydia-like organisms (CLOs) in trachoma-endemic Ethiopia. *mBio.* 2026;e0053426. [https://doi.org/10.1128/mbio.00534-26](https://doi.org/10.1128/mbio.00534-26)
 
+Bangera SR, Subbiah R, Govindaraj S, Ibegbu C, Reznik D, Read TD, Hartman TJ, Paul S, Torres-Patarroyo N, Lymon KJ, Ciers-Davis NA, Nguyen ML, Bruner DW, Flowers L, Velu V, Xiao C. Characterizing Oral Microbiome and Periodontal Disease in Oral HPV-Positive (COMP-HPV) individuals with HIV: an observational longitudinal study protocol. *BMC Oral Health.* 2026;26(1). [https://doi.org/10.1186/s12903-026-08193-x](https://doi.org/10.1186/s12903-026-08193-x)
+
 #### 2025
 
 Talbot BM, Jacko NF, Hofstetter KS, et al. Methicillin-Resistant Staphylococcus aureus Bacteremia Relapses Show Diverse Genomic Profiles but Convergence in Bacteremia-Associated Genes. *J Infect Dis.* 2025;232(6):1338-1350. [https://doi.org/10.1093/infdis/jiaf352](https://doi.org/10.1093/infdis/jiaf352)
