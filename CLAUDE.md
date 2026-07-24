@@ -98,9 +98,9 @@ The News section provides short updates and announcements with automatic RSS fee
 
 News posts appear in reverse chronological order on the `/news/` page.
 
-**Publication cross-listing rule:** When a news item mentions a new publication, always look up the full citation (all authors, journal, year, DOI) and add it to the "Recent Publications" section in `content/research.md` under the appropriate year heading. Create a new year heading if needed. Use the same citation format as existing entries.
+**Publication cross-listing rule:** When a news item or blog post mentions a new publication, always look up the full citation (all authors, journal, year, DOI) and add it to the "Recent Publications" section in `content/research.md` under the appropriate year heading. Create a new year heading if needed. Use the same citation format as existing entries.
 
-**PubMed update rule:** Any time the news section is updated (new post added or existing post edited), search PubMed for recent publications by lab members and update the "Recent Publications" section in `content/research.md` with any new entries not already listed. Use the NCBI E-utilities API (e.g., `https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=Read+TM[Author]&retmax=10&sort=date`) or search PubMed directly to find new publications. Add any missing entries under the appropriate year heading using the same citation format as existing entries.
+**PubMed update rule:** Any time the news section or the blog is updated (new news post or blog post added, or an existing one edited), search PubMed for recent publications by lab members and update the "Recent Publications" section in `content/research.md` with any new entries not already listed. Use the NCBI E-utilities API (e.g., `https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=Read+TM[Author]&retmax=10&sort=date`) or search PubMed directly to find new publications. Add any missing entries under the appropriate year heading using the same citation format as existing entries.
 
 **People linking rule:** When mentioning a person by name in a news item, link their name if possible:
 - Current members (those with a file in `content/group/`): link to `/group/${firstname}-${lastname}/`

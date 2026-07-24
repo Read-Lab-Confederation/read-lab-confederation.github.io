@@ -37,6 +37,8 @@ Olagoke O, Zheng X, Chung S, Mengistie HD, Asfawa K, Read TD, Dean D. Phylogenet
 
 Bangera SR, Subbiah R, Govindaraj S, Ibegbu C, Reznik D, Read TD, Hartman TJ, Paul S, Torres-Patarroyo N, Lymon KJ, Ciers-Davis NA, Nguyen ML, Bruner DW, Flowers L, Velu V, Xiao C. Characterizing Oral Microbiome and Periodontal Disease in Oral HPV-Positive (COMP-HPV) individuals with HIV: an observational longitudinal study protocol. *BMC Oral Health.* 2026;26(1). [https://doi.org/10.1186/s12903-026-08193-x](https://doi.org/10.1186/s12903-026-08193-x)
 
+Alexander AM, Loo HQ, Askew L, Raghuram V, Satola SW, Read TD, Goldberg JB. Intraspecific diversity of *Staphylococcus aureus* populations isolated from cystic fibrosis respiratory infections. *Microbiol Spectr.* 2026;e0036726. [https://doi.org/10.1128/spectrum.00367-26](https://doi.org/10.1128/spectrum.00367-26)
+
 #### 2025
 
 Talbot BM, Jacko NF, Hofstetter KS, et al. Methicillin-Resistant Staphylococcus aureus Bacteremia Relapses Show Diverse Genomic Profiles but Convergence in Bacteremia-Associated Genes. *J Infect Dis.* 2025;232(6):1338-1350. [https://doi.org/10.1093/infdis/jiaf352](https://doi.org/10.1093/infdis/jiaf352)
