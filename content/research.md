@@ -21,6 +21,10 @@ Through a network of collaborations we have studied the genomes of a wide range 
 
 #### 2026
 
+Sharma P, Dean D, Read TD. Detecting and typing *Chlamydia trachomatis* strains in metagenomes using the MetaChlam pipeline. *bioRxiv.* 2026;2026.08.18.745514. [https://doi.org/10.64898/2026.08.18.745514](https://doi.org/10.64898/2026.08.18.745514)
+
+Uwamanzu-Nna A, Olagoke O, Shi CX, Mengistie HD, Asfaha K, Read TD, Dean D. Ocular community state types reveal distinct microbial compositions among microbiomes with implications for trachoma control. *bioRxiv.* 2026;2026.07.16.738988. [https://doi.org/10.64898/2026.07.16.738988](https://doi.org/10.64898/2026.07.16.738988)
+
 Su M, Hoang KL, Penley M, Davis MH, Gresham JD, Morran LT, Read TD. Host and antibiotic jointly select for greater virulence in Staphylococcus aureus. *eLife.* 2026;107936. [https://doi.org/10.7554/eLife.107936](https://doi.org/10.7554/eLife.107936)
 
 Phillips MA, Petit RA 3rd, Weissman DB, Read TD. Transition of Staphylococcus aureus tetracycline resistance plasmid pT181 from independent multicopy replicon to predominantly integrated chromosomal element over 65 years. *eLife.* 2026;109393v1. [https://doi.org/10.7554/eLife.109393.1](https://doi.org/10.7554/eLife.109393.1)

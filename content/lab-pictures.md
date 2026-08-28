@@ -5,6 +5,8 @@ draft: false
 type: "labpictures"
 ---
 
+{{< gallery-image "/images/group/group-2026-08-20.jpg" "Lab Hackathon, August 2026: L-R, Isabel, Megan, Tim, Parul, Ana, Abby, Maggie (Photo by Katrina)" >}}
+
 {{< gallery-image "/images/group/microbeatl-2026-03.jpg" "At MicrobeATL March 2026. L-R: Ana, Tim, Megan, Katrina" >}}
 
 {{< gallery-image "/images/group/group-2025.jpg" "December 2025 L-R: Charlotte, Ana, Tim, Megan, Katrina, Hannah" >}}
